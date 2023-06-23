@@ -43,6 +43,6 @@ app.get('/', getCongratulation);
 //   res.render('./pages/index');
 // });
 
-app.listen(3000,'0.0.0.0', function () {
+app.listen(3000, function () {
   console.log(`Example app listening on port ${port}`);
 });
