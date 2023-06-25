@@ -21,7 +21,7 @@ const createCongratulation = async (req, res) => {
   try {
     const newCongra = req.body;
     const congra = await congraModel.create({ ...newCongra });
-    // return res.status(201).json(congra);
+    return res.status(201).json(congra);
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
