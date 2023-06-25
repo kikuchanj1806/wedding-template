@@ -41,7 +41,7 @@ const getCongratulation = async (req, res) => {
 };
 
 
-app.post('/', createCongratulation);
+// app.post('/', createCongratulation);
 app.get('/', getCongratulation);
 
 // app.get('/', function(req, res) {
