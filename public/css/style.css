@@ -1,0 +1,30 @@
+
+
+.page-wrapper p {
+    font-size: 18px;
+    font-size: 1.125rem;
+    color: #838383;
+    line-height: 1.6em;
+    margin: 0 0 1.5em;
+}
+
+/* form greetings */
+.guest-wrap {
+    background: rgba(255,255,255,.9);
+    padding: 70px;
+}
+.contact-title h2 {
+    position: relative;
+    font-size: 50px;
+    font-family: 'Great Vibes',cursive;
+    margin-bottom: 25px;
+    color: #649e93;
+    margin-top: 0;
+}
+
+.page-wrapper .contact-title p {
+    color: #5a5858;
+    font-size: 18px;
+}
+
+
