@@ -30,6 +30,10 @@ const getCongratulation = async (req, res) => {
   try {
     // const congra = await congraModel.find();
     // return res.render('pages/index', { congra });
+    res.json({
+      status: 200,
+      message: congra,
+    });
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
