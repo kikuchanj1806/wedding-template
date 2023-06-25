@@ -19,8 +19,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const createCongratulation = async (req, res) => {
   try {
-    // const newCongra = req.body;
-    // const congra = await congraModel.create({ ...newCongra });
+    const newCongra = req.body;
+    const congra = await congraModel.create({ ...newCongra });
     // return res.status(201).json(congra);
   } catch (error) {
     return res.status(500).json({ error: error.message });
@@ -28,11 +28,12 @@ const createCongratulation = async (req, res) => {
 };
 const getCongratulation = async (req, res) => {
   try {
-    // const congra = await congraModel.find();
+    const congra = await congraModel.find();
     // return res.render('pages/index', { congra });
     res.json({
       status: 200,
       message: congra,
+      log: "connect successful"
     });
   } catch (error) {
     return res.status(500).json({ error: error.message });
