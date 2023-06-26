@@ -1,6 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Dancing+Script:wght@400;500;600;700&display=swap');
 
+h3 {
+    color: #000;
+    font-family: "Work Sans", Arial, sans-serif;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+ul {
+    padding: 0;
+}
 
 #section1 {
     position: relative;
@@ -83,6 +97,10 @@
 #section2 {
     width: 100%;
     height: 50vh;
+    align-items: center;
+        background-color: #f324bb5c;
+        display: flex;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 /* form greetings */
@@ -103,5 +121,245 @@
     color: #5a5858;
     font-size: 18px;
 }
+
+#countdown {
+    color: #333;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+}
+
+li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+li span {
+    display: block;
+    font-size: 4.5rem;
+}
+
+.emoji {
+    display: none;
+    padding: 1rem;
+}
+
+.emoji span {
+    font-size: 4rem;
+    padding: 0 .5rem;
+}
+
+@media all and (max-width: 768px) {
+    h1 {
+        font-size: calc(1.5rem * var(--smaller));
+    }
+
+    li {
+        font-size: calc(1.125rem * var(--smaller));
+    }
+
+    li span {
+        font-size: calc(3.375rem * var(--smaller));
+    }
+}
+
+
+#countdown > .simbly-section{
+    display: inline-block;
+        width: 125px;
+        height: 125px;
+        background: rgba(241, 78, 149, 0.8);
+        margin: 0 4px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+        position: relative;
+        animation: pulse 1s ease infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#countdown > .simbly-section > div {
+        display: table-cell;
+        vertical-align: middle;
+        height: 125px;
+        width: 125px;
+}
+
+#countdown > .simbly-section .simply-amount {
+    display: block;
+    color: white;
+}
+
+.simply-amount {
+    font-size: 40px;
+}
+
+.simply-word {
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+#section3 {
+    padding: 7em 0;
+    clear: both;
+    height: 80vh;
+}
+
+.desc-bride p,
+.desc-groom p
+ {
+    font-family: "Work Sans", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #828282;
+}
+
+.fh5co-heading {
+    margin-bottom: 5em;
+}
+
+.fh5co-heading h2 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #F14E95;
+    font-family: "Sacramento", Arial, serif;
+}
+
+.fh5co-heading p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #828282;
+}
+
+.js .animate-box {
+    opacity: 0;
+}
+
+.couple-half h3 {
+    font-family: "Sacramento", Arial, serif;
+    color: #F14E95;
+    font-size: 30px;
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.animated-fast {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.couple-wrap {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.couple-half {
+    width: 50%;
+    float: left;
+}
+
+.couple-half .groom {
+    float: right !important;
+    margin-right: 5px;
+}
+
+.couple-half .bride {
+    float: left;
+    margin-left: 5px;
+}
+
+.couple-half .desc-bride {
+    padding-left: 180px;
+    text-align: left;
+}
+
+.couple-half .groom,
+.couple-half .bride {
+    float: left;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.couple-half .desc-groom {
+    padding-right: 180px;
+    text-align: right;
+}
+
+.heart {
+    position: absolute;
+    top: 4em;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    animation: pulse 1s ease infinite;
+}
+
+.heart i {
+    font-size: 20px;
+    background: #fff;
+    padding: 20px;
+    color: #F14E95;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.icon-heart2:before {
+    content: "\e9b5";
+}
+
+.couple-half .groom img,
+.couple-half .bride img {
+    width: 150px;
+    height: 150px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) { .fh5co-heading h2 {
+    font-size: 40px;
+}
+}
+
+
 
 
