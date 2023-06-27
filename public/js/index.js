@@ -32,5 +32,5 @@ document.getElementById("wedding-form").addEventListener("submit", async (event)
     }
   } catch (error) {
     console.error(error);
-  }
+  } 
 });
