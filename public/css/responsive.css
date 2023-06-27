@@ -1,0 +1,7 @@
+/* responsive */
+
+@media (max-width: 768px) {
+    #section1.header__main {
+        height: 600px !important;
+    }
+}
