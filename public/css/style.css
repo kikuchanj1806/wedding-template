@@ -392,9 +392,9 @@ li span {
 }
 
 .event {
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
     position: relative;
 }
 
@@ -448,7 +448,7 @@ li span {
 #section4 {
     padding: 7em 0;
     clear: both;
-    height: 100vh;
+    height: 125vh;
 }
 
 .testimonial .testimony-slide figure img {
@@ -501,6 +501,29 @@ li span {
 
 .slick-slide img {
     display: inline-block;
+}
+
+/* slick */
+.slick-dots li.slick-active button:before {
+    opacity: 0.75;
+    color: pink;
+}
+
+.slick-dots li button:before {
+    font-family: slick;
+    font-size: 12px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .25;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 
