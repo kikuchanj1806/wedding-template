@@ -32,6 +32,9 @@ const congraSchema = new mongoose.Schema({
           message: "Please enter at least 10 characters",
         },
       },
+      image: {
+        type: [String],
+      }
   });
   
 module.exports = mongoose.model("congra", congraSchema);

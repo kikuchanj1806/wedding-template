@@ -4,12 +4,12 @@ const path = require('path');
 const bodyParser = require("body-parser");
 const congraModel = require('./src/models/info.model')
 const {connectDB} = require('./src/config/config');
+const app = express();
 
 // const port = process.env.PORT || 3000;
 
 connectDB();
 
-var app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(cors());
@@ -51,6 +51,8 @@ app.get('/', getCongratulation);
 //   res.render('./pages/index');
 // });
 
+
 app.listen(3000, function () {
   console.log(`Example app listening on port 3000`);
 });
+
