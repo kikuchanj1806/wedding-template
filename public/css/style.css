@@ -143,7 +143,7 @@ ul {
     height: 45px;
     margin-top: 20px;
     padding-left: 10px;
-    background: #fff;
+    /* background: #fff; */
     opacity: 1;
     border: none;
     border-radius: 5px;
@@ -162,7 +162,7 @@ ul {
 .contact-form input[type=submit] {
     border: none;
     padding: 5px 21px 7px;
-    background: #649e93;
+    background: #F14E95;
     color: #fff;
     border-radius: 5px;
     margin-top: 20px;
@@ -217,7 +217,7 @@ select.form-control:not([size]):not([multiple]) {
     font-size: 50px;
     font-family: 'Dancing Script', cursive;
     margin-bottom: 25px;
-    color: #649e93;
+    color: #F14E95;
     margin-top: 0;
 }
 
@@ -524,7 +524,7 @@ li span {
 #section4 {
     padding: 7em 0;
     clear: both;
-    height: 125vh;
+    height: 90vh;
 }
 
 #section4 .box_slide {
@@ -581,7 +581,7 @@ li span {
 }
 
 .slick-slide img {
-    display: inline-block;
+    display: inline-block !important;
 }
 
 /* slick */
@@ -605,6 +605,89 @@ li span {
     color: #000;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+/* uploadAvatar */
+
+.design-name {
+    color: red;
+}
+
+h1 {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0 20px;
+}
+
+h1 small {
+    display: block;
+    font-size: 15px;
+    padding-top: 8px;
+    color: gray;
+}
+
+.avatar-upload {
+    position: relative;
+    max-width: 205px;
+    margin: 50px auto;
+}
+
+.avatar-upload .avatar-edit {
+    position: absolute;
+    right: 12px;
+    z-index: 1;
+    top: 10px;
+}
+
+.avatar-upload .avatar-edit input {
+    display: none;
+}
+
+.avatar-upload .avatar-edit input+label {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    margin-bottom: 0;
+    border-radius: 100%;
+    background: #FFFFFF;
+    border: 1px solid transparent;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+}
+
+.avatar-upload .avatar-edit input+label:hover {
+    background: #f1f1f1;
+    border-color: #d6d6d6;
+}
+
+.avatar-upload .avatar-edit i {
+    color: #F14E95;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto;
+}
+
+.avatar-upload .avatar-preview {
+    width: 192px;
+    height: 192px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid #F14E95;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-upload .avatar-preview>div {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
