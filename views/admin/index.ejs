@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý dữ liệu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Quản lý dữ liệu</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tên</th>
+                    <th>Số điện thoại</th>
+                    <th>Avatar</th>
+                    <th>Tệp đính kèm</th>
+                    <th>Sự kiện</th>
+                    <th>Lời chúc</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% dataUser.forEach(function(user) { %>
+                    <tr>
+                        <td>
+                            <%= user.name %>
+                        </td>
+                        <td>
+                            <%= user.phone %>
+                        </td>
+                        <td>
+                            <%= user.images %>
+                                <img src="<% user.images %>" alt="Avatar">
+                        </td>
+                        <td>
+                            <%= user.attachment %>
+                        </td>
+                        <td>
+                            <%= user.eventOption.replace(/\n/g, "<br>" ) %>
+                        </td>
+                        <td>
+                            <%= user.greetings %>
+                        </td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
