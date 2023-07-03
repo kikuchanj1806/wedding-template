@@ -26,7 +26,7 @@ document.getElementById("wedding-form").addEventListener("submit", async (event)
     if (response.ok) {
       const congra = await response.json();
       // Xử lý kết quả thành công
-      // console.log(congra);
+      console.log(congra);
     } else {
       // Xử lý kết quả thất bại
       const errorData = await response.json();
@@ -67,5 +67,3 @@ document.getElementById('readUrl').addEventListener('change', function(){
     })
   }
 });
-
-

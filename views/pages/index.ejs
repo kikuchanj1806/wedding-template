@@ -16,7 +16,7 @@
     integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css
-    " />
+      " />
   <%- include('../partials/head'); %>
 </head>
 
@@ -172,7 +172,7 @@
                 <div class="item">
                   <div class="testimony-slide text-center">
                     <figure>
-                      <img src="<%= congratulation.image ? congratulation.image : '/public/images/icon/user.png' %>"
+                      <img src="<%= congratulation.image == '' ? '/images/icon/user.png' : congratulation.image  %>"
                         alt="user">
                     </figure>
                     <span>
@@ -213,6 +213,23 @@
                 <input type="hidden" name="_wpcf7_posted_data_hash" value="">
                 <input type="hidden" name="_wpcf7_recaptcha_response" value="">
               </div>
+              <div class="container">
+                <!-- <h1>jQuery Profile Upload
+                  <small>with preview</small>
+                </h1> -->
+                <div class="avatar-upload">
+                  <div class="avatar-edit">
+                    <input type='file' id="readUrl" accept=".png, .jpg, .jpeg" />
+                    <label for="readUrl">
+                      <i class="fas fa-pen"></i>
+                    </label>
+                  </div>
+                  <div class="avatar-preview">
+                    <img id="uploadedImage" src="" alt="Uploaded Image" accept="image/png, image/jpeg"
+                      style="display:none; width: 100%; border-radius: 50%;" data-name="upload">
+                  </div>
+                </div>
+              </div>
               <div class="row">
                 <div class="col-12 col-sm-6">
                   <span class="form-control-wrap" data-name="name">
@@ -250,11 +267,6 @@
                     </select>
                   </span>
                 </div>
-                <div class="col col-sm-6">
-                  <input type='file' id="readUrl">
-                  <img id="uploadedImage" src="#" alt="Uploaded Image" accept="image/png, image/jpeg"
-                    style="display:none;" data-name="upload">
-                </div>
                 <div class="col-md-12" style="margin-top: 20px;">
                   <span class="form-control-wrap" data-name="greetings">
                     <span style="margin-bottom: 5px !important;">Bạn có lời chúc nào cho chúng tôi không?</span>
@@ -265,7 +277,7 @@
                       characters.</label>
                   </span>
                 </div>
-                <div class="col-md-12 text-center">
+                <div class="col-md-12 text-center input-row">
                   <input id="submit-form" type="submit" value="Gửi Lời Tham Gia"
                     class="form-control has-spinner submit submit"><span class="spinner"></span>
                 </div>
@@ -277,7 +289,6 @@
 
     </div>
   </div>
-  <script src="../../public/js/simplyCountdown.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
     integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="

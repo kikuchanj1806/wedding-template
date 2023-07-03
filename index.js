@@ -17,8 +17,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
 const createCongratulation = async (req, res) => {
   try {
     const newCongra = req.body;
@@ -32,6 +30,7 @@ const createCongratulation = async (req, res) => {
 const getCongratulation = async (req, res) => {
   try {
     const congra = await congraModel.find();
+    console.log(congra);
     return res.render('pages/index', { congra });
     // res.json({
     //   status: 200,
