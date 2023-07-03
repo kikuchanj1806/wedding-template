@@ -42,3 +42,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+  document.addEventListener('DOMContentLoaded', function () {
+    const iosToggles = document.querySelectorAll('.ios-toggle');
+  
+    iosToggles.forEach((iosToggle) => {
+      iosToggle.addEventListener('change', function () {
+        const userId = this.getAttribute('data-id');
+        const iosToggleLabel = this.closest('.ios-toggle-container').querySelector('.ios-toggle-label');
+        if (this.checked) {
+          iosToggleLabel.classList.add('active');
+          // Perform any actions needed for the user with userId
+        } else {
+          iosToggleLabel.classList.remove('active');
+          // Perform any actions needed for the user with userId
+        }
+      });
+    });
+  });

@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require("cors");
+const app = express();
 const session = require('express-session');
 const path = require('path');
 const bodyParser = require("body-parser");
@@ -17,11 +18,19 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  secret: 'FHJSH7879879sfsdjfjsd',
+  resave: false,
+  saveUninitialized: true,
+  cookie: {
+    secure: 'auto',
+    maxAge: 100 * 24 * 60 * 60 * 1000 // 100 days in milliseconds
+  }
+}));
 
 const createCongratulation = async (req, res) => {
   try {
     const newCongra = req.body;
-    console.log(newCongra);
     const congra = await congraModel.create({ ...newCongra });
     return res.status(201).json(congra);
   } catch (error) {
@@ -31,13 +40,7 @@ const createCongratulation = async (req, res) => {
 const getCongratulation = async (req, res) => {
   try {
     const congra = await congraModel.find();
-    console.log(congra);
     return res.render('pages/index', { congra });
-    // res.json({
-    //   status: 200,
-    //   message: congra,
-    //   log: "connect successful"
-    // });
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
@@ -86,10 +89,6 @@ app.get('/login', showLoginPage);
 app.post('/login', login);
 app.post('/api/congratulations', createCongratulation);
 app.get('/', getCongratulation);
-
-// app.get('/', function(req, res) {
-//   res.render('./pages/index');
-// });
 
 app.listen(3000, function () {
   console.log(`Example app listening on port 3000`);

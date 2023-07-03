@@ -167,7 +167,9 @@
             </div>
           </div>
           <div class="row slider">
-            <% congra.forEach((congratulation)=> { %>
+            <% congra.forEach((congratulation)=> {
+              if (congratulation.isVisible) {
+              %>
               <div class="image-slider">
                 <div class="item">
                   <div class="testimony-slide text-center">
@@ -186,7 +188,7 @@
                   </div>
                 </div>
               </div>
-              <% }); %>
+              <% } }); %>
           </div>
         </div>
     </section>
