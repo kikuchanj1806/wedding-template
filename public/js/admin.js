@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Có lỗi xảy ra:', error);
       }
     }
-  });
-  document.addEventListener('DOMContentLoaded', function () {
+});
+document.addEventListener('DOMContentLoaded', function () {
     const iosToggles = document.querySelectorAll('.ios-toggle');
   
     iosToggles.forEach((iosToggle) => {
@@ -58,4 +58,47 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const visibilityChanges = [];
+
+  document.querySelectorAll(".ios-toggle").forEach((toggle) => {
+    toggle.addEventListener("change", function () {
+      const userId = this.getAttribute("data-id");
+      const isVisible = this.checked;
+
+      const changeIndex = visibilityChanges.findIndex((change) => change.id === userId);
+
+      if (changeIndex === -1) {
+        visibilityChanges.push({ id: userId, isVisible: isVisible });
+      } else {
+        visibilityChanges[changeIndex].isVisible = isVisible;
+      }
+    });
   });
+
+  const saveButton = document.querySelector(".save-button");
+  if (saveButton) {
+    saveButton.addEventListener("click", function () {
+      updateVisibility(visibilityChanges);
+    });
+  }
+
+  function updateVisibility(actions) {
+    fetch("/admin", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(actions),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+        window.location.reload(true);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }
+});

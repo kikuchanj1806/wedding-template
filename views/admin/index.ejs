@@ -161,8 +161,9 @@
                         <td>
                             <div class="ios-toggle-container">
                                 <input type="checkbox" id="ios-toggle-<%= user.id %>" class="ios-toggle"
-                                    data-id="<%= user.id %>" />
-                                <label for="ios-toggle-<%= user.id %>" class="ios-toggle-label"></label>
+                                    data-id="<%= user.id %>" <%=user.isVisible ? 'checked' : '' %> />
+                                <label for="ios-toggle-<%= user.id %>"
+                                    class="ios-toggle-label <%= user.isVisible ? 'active' : '' %>"></label>
                             </div>
                         </td>
                     </tr>

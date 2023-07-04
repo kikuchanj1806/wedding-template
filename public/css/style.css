@@ -531,6 +531,10 @@ li span {
     flex-wrap: nowrap !important;
 }
 
+#section4 .slider {
+    justify-content: center;
+}
+
 .testimonial .testimony-slide figure img {
     width: 100px;
     height: 100px;
@@ -542,8 +546,7 @@ li span {
 
 .testimonial .testimony-slide blockquote {
     border: none;
-    margin: 30px auto;
-    width: 50%;
+    margin: 20px 0;
     position: relative;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;

@@ -1,8 +1,6 @@
 document.getElementById("wedding-form").addEventListener("submit", async (event) => {
   event.preventDefault();
 
-
-
   const name = document.querySelector("[name='name']").value;
   const phone = document.querySelector("[name='phone']").value;
   const attachment = document.querySelector("[name='number']").value;
@@ -25,6 +23,7 @@ document.getElementById("wedding-form").addEventListener("submit", async (event)
 
     if (response.ok) {
       const congra = await response.json();
+      console.log(congra);
     } else {
       const errorData = await response.json();
       console.error(errorData);
