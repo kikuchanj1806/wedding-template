@@ -15,8 +15,8 @@ connectDB();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({ limit: '50mb' }));
+app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
   secret: 'FHJSH7879879sfsdjfjsd',
@@ -84,13 +84,35 @@ const getAdmin = async (req, res) => {
   }
 };
 
+const updateActions = async (req, res) => {
+  const actions = req.body;
+
+  try {
+    const updatedUsers = await Promise.all(actions.map(async (action) => {
+      const { id } = action;
+      const user = await congraModel.findById(id);
+      if (user) {
+        await congraModel.findByIdAndUpdate(id, { $set: { ...action } });
+        return user;
+      } else {
+        throw new Error(`User not found with id: ${id}`);
+      }
+    }));
+
+    res.json({ success: true, message: "Trạng thái isVisible đã được cập nhật", data: updatedUsers });
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Có lỗi xảy ra khi cập nhật trạng thái isVisible", error: error });
+  }
+};
+
 app.get('/admin', getAdmin);
+app.post('/admin', updateActions);
 app.get('/login', showLoginPage);
 app.post('/login', login);
 app.post('/api/congratulations', createCongratulation);
 app.get('/', getCongratulation);
 
-app.listen(3007, function () {
+app.listen(3008, function () {
   console.log(`Example app listening on port 3000`);
 });
 
