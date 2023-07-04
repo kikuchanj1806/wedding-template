@@ -17,6 +17,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css
       " />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.css" />
   <%- include('../partials/head'); %>
 </head>
 
@@ -227,8 +228,9 @@
                     </label>
                   </div>
                   <div class="avatar-preview">
-                    <img id="uploadedImage" src="" alt="Uploaded Image" accept="image/png, image/jpeg"
-                      style="display:none; width: 100%; border-radius: 50%;" data-name="upload">
+                    <img id="uploadedImage" src="/images/icon/user.png" alt="Uploaded Image"
+                      accept="image/png, image/jpeg" style="width: 100%; height: 100%; border-radius: 50%;"
+                      data-name="upload">
                   </div>
                 </div>
               </div>
@@ -312,10 +314,12 @@
     <script type="text/javascript">
       $('.slider').slick({
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
         infinite: true,
         speed: 300,
         slidesToShow: 1,
-        adaptiveHeight: true
+        adaptiveHeight: true,
       });
     </script>
 </body>

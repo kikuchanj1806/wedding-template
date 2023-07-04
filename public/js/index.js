@@ -6,7 +6,9 @@ document.getElementById("wedding-form").addEventListener("submit", async (event)
   const name = document.querySelector("[name='name']").value;
   const phone = document.querySelector("[name='phone']").value;
   const attachment = document.querySelector("[name='number']").value;
-  const eventOption = document.querySelector("[name='event']").innerText;
+  const eventSelect = document.querySelector("[name='event']");
+  const eventOption = eventSelect.options[eventSelect.selectedIndex].text;
+  // Sử dụng eventOption để gửi đến API
   const greetings = document.querySelector("[name='greetings']").value;
   const image = document.getElementById('uploadedImage').getAttribute('src');
 
@@ -26,7 +28,6 @@ document.getElementById("wedding-form").addEventListener("submit", async (event)
     if (response.ok) {
       const congra = await response.json();
       // Xử lý kết quả thành công
-      console.log(congra);
     } else {
       // Xử lý kết quả thất bại
       const errorData = await response.json();
