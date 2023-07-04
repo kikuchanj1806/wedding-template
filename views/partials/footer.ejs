@@ -18,6 +18,15 @@
         <i class="fas fa-angle-up"></i>
     </button>
 </div>
+<div id="cata-page-music">
+    <div id="cata-toogle-icon" class="cata-music-toggle-btn cata-toogle">
+        <i class="fas fa-music"></i>
+    </div>
+    <div class="cata-music-embed cata-music-soundcloud" id="_no-clickjacking-0" style="opacity: 1; overflow: visible;">
+        <iframe id="sc-widget" width="100%" height="180" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1646568970&amp;color=%23ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_teaser=false"></iframe>
+    </div>
+</div>
 <script>
     // Back to top
     var amountScrolled = 200;
@@ -48,4 +57,62 @@
     // Add waves effect
     Waves.attach('button.back-to-top', 'waves-effect');
     Waves.init();
+
+    $('.cata-music-toggle-btn').click(function () {
+        $(this).toggleClass('active');
+    }
 </script>
+<style>
+    /* player-music */
+
+    #cata-page-music {
+        position: fixed;
+        z-index: 999;
+        bottom: 10px;
+        right: auto;
+        left: 10px;
+    }
+
+    .cata-music-toggle-btn {
+        position: absolute;
+        left: 0;
+        right: auto;
+        bottom: 0;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        font-size: 14px;
+        line-height: 38px;
+        cursor: pointer;
+        text-align: center;
+        color: #fff;
+        -webkit-border-radius: 50%;
+        -moz-box-border-radius: 50%;
+        border-radius: 50%;
+    }
+
+    .cata-music-toggle-btn {
+        background-color: #F14E95;
+    }
+
+    #cata-page-music .cata-music-embed {
+        position: absolute;
+        right: auto;
+        left: 0;
+        bottom: -999em;
+        width: 300px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    #_no-clickjacking-0 {
+        opacity: 1 !important;
+        overflow: visible !important;
+    }
+
+    #cata-page-music .cata-music-toggle-btn.active~.cata-music-embed {
+        bottom: 40px;
+        opacity: 1;
+        visibility: visible;
+    }
+</style>

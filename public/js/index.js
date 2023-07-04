@@ -68,3 +68,44 @@ document.getElementById('readUrl').addEventListener('change', function(){
     })
   }
 });
+$(document).ready(function () {
+  let countdownInterval;
+  let countdownValue = 10;
+
+  const musicDialog = $.confirm({
+    title: "Âm Nhạc!!!",
+    content: "Do trình duyệt chặn tự động phát âm thanh nên bạn hãy nhấn nghe nhạc để thưởng thức các bài hát nhé.",
+    type: "green",
+    closeIcon: false,
+    buttons: {
+      turnOffMusic: {
+        text: "Tắt Nhạc (" + countdownValue + ")",
+        btnClass: "btn-default",
+        action: function () {
+          clearInterval(countdownInterval);
+        },
+      },
+      playMusic: {
+        text: "Nghe Nhạc",
+        btnClass: "btn-default",
+        action: function () {
+          clearInterval(countdownInterval);
+        },
+      },
+    },
+    onOpen: function () {
+      const self = this;
+
+      countdownInterval = setInterval(function () {
+        countdownValue--;
+
+        self.buttons.turnOffMusic.setText("Tắt Nhạc (" + countdownValue + ")");
+
+        if (countdownValue === 0) {
+          clearInterval(countdownInterval);
+          musicDialog.close();
+        }
+      }, 1000);
+    },
+  });
+});
