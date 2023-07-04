@@ -1,22 +1,20 @@
 document.getElementById("wedding-form").addEventListener("submit", async (event) => {
-  event.preventDefault(); // Ngăn chặn sự kiện submit mặc định
+  event.preventDefault();
 
 
-  // Lấy giá trị từ các trường input
+
   const name = document.querySelector("[name='name']").value;
   const phone = document.querySelector("[name='phone']").value;
   const attachment = document.querySelector("[name='number']").value;
   const eventSelect = document.querySelector("[name='event']");
   const eventOption = eventSelect.options[eventSelect.selectedIndex].text;
-  // Sử dụng eventOption để gửi đến API
+
   const greetings = document.querySelector("[name='greetings']").value;
   const image = document.getElementById('uploadedImage').getAttribute('src');
 
-  // Tạo object chứa dữ liệu
   const formData = { name, phone, attachment, eventOption, greetings, image};
 
   try {
-    // Gửi request POST đến API
     const response = await fetch("/api/congratulations", {
       method: "POST",
       headers: {
@@ -27,9 +25,7 @@ document.getElementById("wedding-form").addEventListener("submit", async (event)
 
     if (response.ok) {
       const congra = await response.json();
-      // Xử lý kết quả thành công
     } else {
-      // Xử lý kết quả thất bại
       const errorData = await response.json();
       console.error(errorData);
     }
@@ -53,8 +49,6 @@ document.getElementById('readUrl').addEventListener('change', function(){
 
       success(result) {
         const compressorSize = Math.round(result.size / 1024)
-        // console.log('kich thuoc truoc khi nen: ', Math.round(file / 1024));
-        // console.log('sau khi nen: ', compressorSize);
         const picture = new FileReader();
         picture.readAsDataURL(result);
         picture.onload = function (event) {
