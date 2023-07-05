@@ -33,7 +33,14 @@ ul {
     height: 100vh;
 }
 
-#section1  {
+#section1 .title {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+
+#section1 {
     background-size: cover;
     background-image: url(/images/banner-main/0U8A8212-min.JPG);
     background-position: center;
@@ -49,7 +56,7 @@ ul {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(0,0,0,.6);
+    background: rgba(0, 0, 0, .6);
 }
 
 .header_main_content {
@@ -61,19 +68,19 @@ ul {
     margin: auto;
 }
 
-.col-md-offset-2 > img {
+.col-md-offset-2>img {
     max-width: 80px;
     margin-bottom: 24px;
 }
 
-.col-md-offset-2 > h4.sub-title {
+.col-md-offset-2>h4.sub-title {
     font-family: 'Dancing Script', cursive;
     margin: 0;
     color: #fff;
     font-size: 30px;
 }
 
-.col-md-offset-2 > h1.title {
+.col-md-offset-2>h1.title {
     margin-bottom: 0px;
     font-size: 80px;
     line-height: 1.5;
@@ -82,7 +89,7 @@ ul {
     text-transform: none !important;
 }
 
-.col-md-offset-2 > h2 {
+.col-md-offset-2>h2 {
     font-family: 'Dancing Script', cursive;
     font-size: 28px;
     line-height: 1.5;
@@ -211,11 +218,11 @@ select.form-control:not([size]):not([multiple]) {
     background-image: none;
     border: 1px solid #ccc;
     border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
 
@@ -283,28 +290,28 @@ li span {
 }
 
 
-#countdown > .simbly-section{
+#countdown>.simbly-section {
     display: inline-block;
-        width: 100px;
-        height: 100px;
-        background: rgba(241, 78, 149, 0.8);
-        margin: 0 4px;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        border-radius: 50%;
-        position: relative;
-        animation: pulse 1s ease infinite;
+    width: 100px;
+    height: 100px;
+    background: rgba(241, 78, 149, 0.8);
+    margin: 0 4px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    position: relative;
+    animation: pulse 1s ease infinite;
 }
 
-#countdown > .simbly-section > div {
-        display: table-cell;
-        vertical-align: middle;
-        height: 100px;
-        width: 100px;
+#countdown>.simbly-section>div {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
 }
 
-#countdown > .simbly-section .simply-amount {
+#countdown>.simbly-section .simply-amount {
     display: block;
     color: white;
 }
@@ -320,8 +327,7 @@ li span {
 }
 
 .desc-bride p,
-.desc-groom p
- {
+.desc-groom p {
     font-weight: 400;
     font-size: 17px;
     line-height: 1.7;
@@ -451,7 +457,7 @@ li span {
 #section3 {
     padding: 7em 0;
     clear: both;
-    height: 1030px;
+    height: 100%;
     background: url(../images/section3/img_bg_3.jpg);
 }
 
@@ -478,8 +484,14 @@ li span {
     color: #fff;
 }
 
-.time-event, .location-event {
+.time-event,
+.location-event {
     display: flex;
+}
+
+.location-event>span,
+.time-event>span {
+    margin-left: 3px;
 }
 
 .event {
@@ -500,7 +512,7 @@ li span {
 .event-wrap {
     border: 2px solid rgba(255, 255, 255, 0.5);
     background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
+    padding: 25px;
     width: 100%;
     float: left;
     -webkit-border-radius: 4px;
@@ -637,7 +649,7 @@ li span {
     background-size: cover;
 
     background-repeat: no-repeat;
-    
+
     float: left;
 
     clear: left;
@@ -702,9 +714,13 @@ li span {
 
 }
 
+#fh5co-gallery-list li a:hover:before {
+    background: rgba(0, 0, 0, 0.5);
+}
+
 /* section5 */
 
-#section5 > .container > .row {
+#section5>.container>.row {
     flex-direction: column;
     flex-wrap: nowrap !important;
 }
@@ -737,10 +753,12 @@ li span {
 .section-sub {
     padding: 100px 0;
 }
+
 .wishes {
     position: relative;
 }
-.wishes > h2 {
+
+.wishes>h2 {
     font-size: 50px;
     font-family: 'Dancing Script', cursive;
     margin-bottom: 16px;
@@ -748,11 +766,13 @@ li span {
     margin-top: 0;
     text-align: center;
 }
-.wishes > i {
+
+.wishes>i {
     display: flex;
     justify-content: center;
 }
-.section-sub .wishes::before  {
+
+.section-sub .wishes::before {
     position: absolute;
     content: "";
     width: 60px;
@@ -761,6 +781,7 @@ li span {
     left: calc(50% - 80px);
     background: #121f38;
 }
+
 .section-sub .wishes::after {
     position: absolute;
     content: "";
@@ -822,12 +843,12 @@ li span {
     top: -6px;
     width: 103%;
     height: 105%;
-    border: 1px solid rgba(255,255,255,0.4);
+    border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .content-sub h2 {
     font-size: 80px;
-    font-family: 'Great Vibes',cursive;
+    font-family: 'Great Vibes', cursive;
     color: #fff;
 }
 
@@ -998,91 +1019,101 @@ h1 small {
 .site-footer {
     background-color: #ffffff;
 }
+
 .site-footer .lower-footer {
     text-align: center;
 }
+
 .site-footer .lower-footer .row {
     padding: 35px 15px;
     position: relative;
 }
+
 .lower-footer p a {
     color: #000;
 }
+
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400");
+
 #content {
     max-width: 500px;
     margin: 0 auto;
-  }
-  button.back-to-top{
+}
+
+button.back-to-top {
     margin: 0 !important;
     padding: 0 !important;
     background: #fff;
-      height: 0px;
+    height: 0px;
     width: 0px;
     overflow: hidden;
-      border-radius: 50px;
-      -webkit-border-radius: 50px;
-      -moz-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
     color: transparent;
-      clear: both;
+    clear: both;
     visibility: hidden;
     position: fixed;
     cursor: pointer;
     display: block;
     border: none;
     right: 50px;
-      bottom: 75px;
+    bottom: 75px;
     font-size: 0px;
     outline: 0 !important;
     z-index: 99;
     transition: all .3s ease-in-out;
-  }
-  button.back-to-top > i {
+}
+
+button.back-to-top>i {
     font-size: 35px;
-  }
-  button.back-to-top:hover,
-  button.back-to-top:active,
-  button.back-to-top:focus{
+}
+
+button.back-to-top:hover,
+button.back-to-top:active,
+button.back-to-top:focus {
     outline: 0 !important;
-  }
-  button.back-to-top.show {
+}
+
+button.back-to-top.show {
     display: block;
     background: #fff;
     color: #F14E95;
     font-size: 25px;
     right: 25px;
-      bottom: 50px;
+    bottom: 50px;
     height: 50px;
     width: 50px;
     visibility: visible;
-      box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.25);
     -webkit-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.25);
-  }
-  button.back-to-top.show:active {
+}
+
+button.back-to-top.show:active {
     box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
     -webkit-box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.25);
-  }
+}
 
-    .jconfirm .jconfirm-title {
-        font-size: 20px;
-        font-weight: bold;
-        color: #3c763d;
-      }
+.jconfirm .jconfirm-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3c763d;
+}
 
-      .jconfirm .jconfirm-content {
-        font-size: 16px;
-        color: #333;
-        text-align: center;
-      }
+.jconfirm .jconfirm-content {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
 
-      .jconfirm .btn {
-        font-size: 14px;
-        font-weight: bold;
-        padding: 10px 20px;
-      }
+.jconfirm .btn {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
 
 /* Animation */
 @keyframes pulse {
@@ -1098,13 +1129,3 @@ h1 small {
         transform: scale(1);
     }
 }
-
-
-
-
-
-
-
-
-
-

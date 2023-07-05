@@ -14,108 +14,129 @@
     }
 
     #section2 {
-
-    padding: 3em 0;
+        padding: 3em 0;
     }
-.couple-half .groom img,
-.couple-half .bride img {
-    width: 125px;
-    height: 125px;
-}
+
+    .couple-half .groom img,
+    .couple-half .bride img {
+        width: 125px;
+        height: 125px;
+    }
 
 
-#section2 .couple-half {
+    #section2 .couple-half {
 
-width: 100%;
+        width: 100%;
 
-}
+    }
 
-#section3 {
+    #section3 {
 
-height: auto !important;
+        height: auto !important;
 
-}
+    }
 
-.event-mb {
+    .event-mb {
 
-display: block;
+        display: block;
 
-}
+    }
 
-.event-wrap {
+    .event-wrap {
 
-position: relative;
+        position: relative;
 
-margin-bottom: 15px;
+        margin-bottom: 15px;
 
-}
+    }
 
-#section3 .display-t {
+    #section3 .display-t {
 
-height: inherit;
+        height: inherit;
 
-}
+    }
 
-#section3 .display-tc {
+    #section3 .display-tc {
 
-height: inherit;
+        height: inherit;
 
-}
+    }
 
-.heart {
+    .heart {
 
-display: none;
+        display: none;
 
-}
+    }
 
-#fh5co-gallery-list li.one-third {
+    #fh5co-gallery-list li.one-third {
 
-width: 49%;
+        width: 49%;
 
-}
+    }
 
-.fh5co-heading {
-    margin-bottom: 3em;
-}
+    .fh5co-heading {
+        margin-bottom: 3em;
+    }
 
-.fh5co-heading h2 {
+    .fh5co-heading h2 {
 
-font-size: 40px;
+        font-size: 40px;
 
-}
+    }
 
-#fh5co-gallery-list li a .case-studies-summary {
+    #fh5co-gallery-list li a .case-studies-summary {
 
-bottom: 1em;
+        bottom: 1em;
 
-left: 1em;
+        left: 1em;
 
-right: 1em;
+        right: 1em;
 
-}
+    }
 
-.testimonial .testimony-slide blockquote {
+    .testimonial .testimony-slide blockquote {
 
-width: 100% !important;
+        width: 100% !important;
 
-}
+    }
 
-.contact-title h2 {
+    .contact-title h2 {
 
-font-size: 40px;
+        font-size: 40px;
 
-}
+    }
 
-#section5 {
+    #section5 {
 
-padding: 3em 0;
+        padding: 3em 0;
 
-}
+    }
 
-.content-sub h2 {
-    font-size: 60px;
-}
-.content-sub span {
-    font-size: 20px;
-}
+    .content-sub h2 {
+        font-size: 60px;
+    }
+
+    .content-sub span {
+        font-size: 20px;
+    }
+
+    #countdown>.simbly-section,
+    #countdown>.simbly-section>div {
+        width: 75px;
+        height: 75px;
+    }
+
+    .simply-word {
+        font-size: 10px;
+    }
+
+    .simply-amount {
+        font-size: 23px;
+    }
+
+    #section1 .title {
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 70px;
+    }
 }
