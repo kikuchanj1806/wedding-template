@@ -445,8 +445,12 @@ li span {
 #section3 {
     padding: 7em 0;
     clear: both;
-    height: 850px;
+    height: 1030px;
     background: url(../images/section3/img_bg_3.jpg);
+}
+
+.event-mb {
+    display: flex;
 }
 
 .event .overlay {
