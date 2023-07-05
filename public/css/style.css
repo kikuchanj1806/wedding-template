@@ -526,9 +526,6 @@ li span {
 
 /* section4 */
 
-<<<<<<< Updated upstream
-#section4 {
-=======
 #fh5co-gallery-list {
 
     flex-wrap: wrap;
@@ -630,7 +627,7 @@ li span {
     background-size: cover;
 
     background-repeat: no-repeat;
-
+    
     float: left;
 
     clear: left;
@@ -703,16 +700,11 @@ li span {
 }
 
 #section6 {
->>>>>>> Stashed changes
     padding: 7em 0;
     clear: both;
 }
 
-<<<<<<< Updated upstream
-#section4 .box_slide {
-=======
 #section6 .box_slide {
->>>>>>> Stashed changes
     flex-direction: column;
     flex-wrap: nowrap !important;
 }
@@ -721,11 +713,7 @@ li span {
     justify-content: center;
 }
 
-<<<<<<< Updated upstream
-#section5 {
-=======
 #section6 {
->>>>>>> Stashed changes
     background-size: cover;
     background-image: url(/images/banner-main/img_bg_4.jpg);
     background-position: center;
@@ -777,11 +765,7 @@ li span {
     margin-bottom: 4px;
 }
 
-<<<<<<< Updated upstream
-#section6 {
-=======
 #section7 {
->>>>>>> Stashed changes
     background-size: cover;
     background-image: url(/images/banner-main/img_bg_4.jpg);
     background-position: center;
