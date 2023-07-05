@@ -132,6 +132,12 @@ ul {
     font-family: 'Dancing Script', cursive;
 }
 
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 /* form greetings */
 .guest-wrap {
     background: #eaeaeae6;
@@ -803,7 +809,7 @@ li span {
 
 .content-sub {
     padding: 50px 80px;
-    background: #F14E95;
+    background: #f14e9573;
     display: inline-block;
     z-index: 99;
     position: relative;

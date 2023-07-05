@@ -1,15 +1,28 @@
 /* responsive */
 
 @media (max-width: 768px) {
+    .col {
+        flex-basis: content;
+    }
+
     #section1.header__main {
-        height: 600px !important;
+        height: 700px !important;
+    }
+
+    #section1 .title {
+        margin-top: 30%;
     }
 
     #section2 {
 
-padding: 3em 0;
-
+    padding: 3em 0;
+    }
+.couple-half .groom img,
+.couple-half .bride img {
+    width: 125px;
+    height: 125px;
 }
+
 
 #section2 .couple-half {
 
@@ -97,5 +110,12 @@ font-size: 40px;
 
 padding: 3em 0;
 
+}
+
+.content-sub h2 {
+    font-size: 60px;
+}
+.content-sub span {
+    font-size: 20px;
 }
 }
