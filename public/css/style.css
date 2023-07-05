@@ -457,6 +457,10 @@ li span {
     background: rgba(0, 0, 0, 0.4);
 }
 
+.event-mb {
+    display: flex;
+}
+
 #section3 .event-wrap span,
 #section3 .event-wrap p {
     display: block;

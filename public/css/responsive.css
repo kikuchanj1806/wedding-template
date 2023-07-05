@@ -4,4 +4,61 @@
     #section1.header__main {
         height: 600px !important;
     }
+
+    #section2 {
+        padding: 3em 0;
+    }
+
+    #section2 .couple-half {
+        width: 100%;
+    }
+
+    #section3 {
+        height: auto !important;
+    }
+
+    .event-mb {
+        display: block;
+    }
+
+    .event-wrap {
+        position: relative;
+        left: -9% !important;
+        margin-bottom: 15px;
+    }
+
+    #section3 .display-t {
+        height: inherit;
+    }
+     #section3 .display-tc {
+        height: inherit;
+    }
+    .heart {
+        display: none;
+    }
+    #fh5co-gallery-list li.one-third {
+        width: 49%;
+    }
+
+        .fh5co-heading h2 {
+            font-size: 40px;
+        }
+
+    #fh5co-gallery-list li a .case-studies-summary {
+        bottom: 1em;
+        left: 1em;
+        right: 1em;
+    }
+
+    .testimonial .testimony-slide blockquote {
+        width: 100% !important;
+    }
+
+        .contact-title h2 {
+            font-size: 40px;
+        }
+
+    #section5 {
+        padding: 3em 0;
+    }
 }
