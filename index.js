@@ -32,7 +32,6 @@ app.use(session({
 const createCongratulation = async (req, res) => {
   try {
     const newCongra = req.body;
-    console.log(newCongra);
     const congra = await congraModel.create({ ...newCongra });
     return res.status(201).json(congra);
   } catch (error) {
