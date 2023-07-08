@@ -94,6 +94,11 @@
 
     }
 
+        #fh5co-gallery-list {
+            display: block;
+            width: 196%;
+        }
+
     .testimonial .testimony-slide blockquote {
 
         width: 100% !important;

@@ -8,6 +8,7 @@ const congraModel = require('./src/models/info.model')
 const {connectDB} = require('./src/config/config');
 require('dotenv').config();
 
+
 // const port = process.env.PORT || 3000;
 
 connectDB();
@@ -31,6 +32,7 @@ app.use(session({
 const createCongratulation = async (req, res) => {
   try {
     const newCongra = req.body;
+    console.log(newCongra);
     const congra = await congraModel.create({ ...newCongra });
     return res.status(201).json(congra);
   } catch (error) {
@@ -111,6 +113,7 @@ app.get('/login', showLoginPage);
 app.post('/login', login);
 app.post('/api/congratulations', createCongratulation);
 app.get('/', getCongratulation);
+
 
 app.listen(3007, function () {
   console.log(`Example app listening on port 3000`);
