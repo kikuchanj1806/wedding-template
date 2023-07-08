@@ -65,6 +65,11 @@ $(document).ready(function () {
   let countdownInterval;
   let countdownValue = 10;
 
+  const iframe = document.querySelector("#sc-widget");
+
+  // Khởi tạo SoundCloud Widget API
+  const scWidget = SC.Widget(iframe);
+
   const musicDialog = $.confirm({
     title: "Âm Nhạc!!!",
     content: "Do trình duyệt chặn tự động phát âm thanh nên bạn hãy nhấn nghe nhạc để thưởng thức các bài hát nhé.",
@@ -75,6 +80,7 @@ $(document).ready(function () {
         text: "Tắt Nhạc (" + countdownValue + ")",
         btnClass: "btn-default",
         action: function () {
+          scWidget.pause();
           clearInterval(countdownInterval);
         },
       },
@@ -82,6 +88,7 @@ $(document).ready(function () {
         text: "Nghe Nhạc",
         btnClass: "btn-default",
         action: function () {
+          scWidget.play();
           clearInterval(countdownInterval);
         },
       },
