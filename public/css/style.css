@@ -720,14 +720,13 @@ li span {
 
 /* section5 */
 
+#section5 {
+    padding: 60px 0;
+}
+
 #section5>.container>.row {
     flex-direction: column;
     flex-wrap: nowrap !important;
-}
-
-#section6 {
-    padding: 7em 0;
-    clear: both;
 }
 
 #section6 .box_slide {
@@ -1081,8 +1080,8 @@ button.back-to-top.show {
     background: #fff;
     color: #F14E95;
     font-size: 25px;
-    right: 25px;
-    bottom: 50px;
+    right: 15px;
+    bottom: 15px;
     height: 50px;
     width: 50px;
     visibility: visible;

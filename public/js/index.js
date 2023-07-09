@@ -73,7 +73,7 @@ $(document).ready(function () {
   const musicDialog = $.confirm({
     title: "Âm Nhạc!!!",
     content: "Do trình duyệt chặn tự động phát âm thanh nên bạn hãy nhấn nghe nhạc để thưởng thức các bài hát nhé.",
-    type: "green",
+    type: "purple",
     closeIcon: false,
     buttons: {
       turnOffMusic: {
@@ -107,5 +107,14 @@ $(document).ready(function () {
         }
       }, 1000);
     },
+  });
+  $('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
   });
 });
