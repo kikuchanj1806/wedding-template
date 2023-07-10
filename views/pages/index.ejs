@@ -540,53 +540,14 @@
         </div>
       </div>
     </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.js"></script>
+    <%- include('../partials/script'); %>
   </div>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-    integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-
   <footer>
     <%- include('../partials/footer'); %>
   </footer>
-  <%- include('../partials/script'); %>
-    <script>
-      const parallax = document.getElementById("section1");
 
-      function updateParallax() {
-        let offset = window.pageYOffset;
-        parallax.style.backgroundPositionY = offset * 0.7 + "px";
-      }
-
-      window.addEventListener("scroll", updateParallax);
-    </script>
-    <script>
-      $('[data-fancybox="gallery-1"]').fancybox({
-        buttons: [
-          "slideShow",
-          "thumbs",
-          "zoom",
-          "fullScreen",
-          "share",
-          "close"
-        ],
-        loop: false,
-        protect: true
-      });
-
-    </script>
-    <script type="text/javascript">
-      $('.slider').slick({
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-      });
-    </script>
 </body>
 
 </html>

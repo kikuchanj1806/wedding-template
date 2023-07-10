@@ -12,8 +12,6 @@
         </div>
     </div>
 </footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.6/waves.min.js"></script>
-<script src="https://w.soundcloud.com/player/api.js"></script>
 <div class="backToTop">
     <button class="back-to-top" type="button">
         <i class="fas fa-angle-up"></i>
@@ -25,47 +23,10 @@
     </div>
     <div class="cata-music-embed cata-music-soundcloud" id="_no-clickjacking-0" style="opacity: 1; overflow: visible;">
         <iframe id="sc-widget" width="100%" height="180" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1647028111&amp;color=%23ff5500&amp;auto_play=true&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_teaser=false"></iframe>
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1647028111&amp;color=%23ff5500&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_teaser=false"></iframe>
     </div>
 </div>
-<script>
-    // Back to top
-    var amountScrolled = 200;
-    var amountScrolledNav = 25;
-
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > amountScrolled) {
-            $('button.back-to-top').addClass('show');
-        } else {
-            $('button.back-to-top').removeClass('show');
-        }
-    });
-
-    $('button.back-to-top').click(function () {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 800);
-        return false;
-    });
-
-    // Ignore this
-    // This is just for content manipulation
-    var skeleton = '<div class="skeleton"><div class="skeleton-wrapper"><div class="skeleton-wrapper-inner"><div class="skeleton-wrapper-body"><div class="skeleton-avatar"></div><div class="skeleton-author"></div><div class="skeleton-label"></div><div class="skeleton-content-1"></div><div class="skeleton-content-2"></div><div class="skeleton-content-3"></div></div></div></div></div>';
-    for (var i = 0; i < 10; i++) {
-        $('#content').append(skeleton);
-    }
-
-    // Add waves effect
-    Waves.attach('button.back-to-top', 'waves-effect');
-    Waves.init();
-
-    $('.cata-music-toggle-btn').click(function () {
-        $(this).toggleClass('active');
-    });
-</script>
 <style>
-    /* player-music */
-
     #cata-page-music {
         position: fixed;
         z-index: 999;
