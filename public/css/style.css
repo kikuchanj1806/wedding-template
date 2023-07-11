@@ -34,20 +34,35 @@ ul {
 }
 
 #section1 .title {
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     gap: 1rem;
 }
 
-
-#section1 {
+.slider-item img {
+    width: 100%;
+    height: 100vh;
     background-size: cover;
-    background-image: url(https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/Img-banner/0U8A8212-min_hypahy_1_zbdf9l);
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    object-fit: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
+
+.slick-next .slick-arrow {
+    height: 100px;
+}
+
+.slider-main {
+    display: flex !important;
+}
+
+
+
+.slider .slider-main button:not(:disabled) {
+    cursor: pointer;
+    display: none !important;
+}
+
 
 .banner_main .overlay {
     z-index: 0;
@@ -62,6 +77,11 @@ ul {
 .header_main_content {
     color: #fff;
     margin-top: -8em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 .col-md-offset-2 {

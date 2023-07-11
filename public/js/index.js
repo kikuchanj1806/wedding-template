@@ -92,22 +92,14 @@ $(document).ready(function () {
     loop: false,
     protect: true
   });
-  $('.slider').slick({
-    dots: true,
+  $('.slider-main').slick({
+    // dots: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 5000,
     infinite: true,
     speed: 300,
     slidesToShow: 1,
   });
-  const parallax = document.getElementById("section1");
-
-  function updateParallax() {
-    let offset = window.pageYOffset;
-    parallax.style.backgroundPositionY = offset * 0.7 + "px";
-  }
-
-  window.addEventListener("scroll", updateParallax);
 });
 document.getElementById("wedding-form").addEventListener("submit", async (event) => {
   event.preventDefault();
