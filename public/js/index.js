@@ -100,6 +100,14 @@ $(document).ready(function () {
     speed: 300,
     slidesToShow: 1,
   });
+  $('.slider').slick({
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+  });
 });
 document.getElementById("wedding-form").addEventListener("submit", async (event) => {
   event.preventDefault();

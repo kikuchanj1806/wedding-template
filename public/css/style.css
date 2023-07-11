@@ -39,30 +39,6 @@ ul {
     gap: 1rem;
 }
 
-.slider-item img {
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    object-fit: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.slick-next .slick-arrow {
-    height: 100px;
-}
-
-.slider-main {
-    display: flex !important;
-}
-
-
-
-.slider .slider-main button:not(:disabled) {
-    cursor: pointer;
-    display: none !important;
-}
-
 
 .banner_main .overlay {
     z-index: 0;
@@ -1220,6 +1196,63 @@ button.back-to-top.show:active {
 
 .form-control-wrap.success input {
     border-color: 2px solid green;
+}
+
+/* slide dots */
+
+.slider-item img {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.slick-next .slick-arrow {
+    height: 100px;
+}
+
+.slider-main {
+    display: flex !important;
+}
+
+.slider .slider-main button:not(:disabled) {
+    cursor: pointer;
+    display: none !important;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem 0;
+    
+}
+
+.slick-dots button {
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    padding: 0;
+    background: transparent;
+    border: 2px solid #F14E95;
+    border: none;
+    border-radius: 100%;
+    background-color: rgb(237, 17, 222);
+    text-indent: -9999px;
+}
+
+li.slick-active button {
+    background-color: rgb(6, 236, 6);
+}
+
+.slick-prev{
+    display: none !important;
+}
+
+.slick-next {
+    display: none !important;
 }
 
 /* Animation */
