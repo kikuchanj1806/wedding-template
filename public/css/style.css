@@ -1188,6 +1188,19 @@ button.back-to-top.show:active {
     margin: auto;
 }
 
+/* formValidation */
+
+.form-control-wrap.error input {
+    border-bottom: 2px solid red;
+}
+
+.form-control-wrap.error small {
+    color: red;
+}
+
+.form-control-wrap.success input {
+    border-color: 2px solid green;
+}
 
 /* Animation */
 @keyframes pulse {
