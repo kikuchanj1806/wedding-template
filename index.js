@@ -5,11 +5,11 @@ const session = require('express-session');
 const path = require('path');
 const bodyParser = require("body-parser");
 const congraModel = require('./src/models/info.model')
-const {connectDB} = require('./src/config/config');
+const { connectDB } = require('./src/config/config');
 require('dotenv').config();
 
 
-// const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 connectDB();
 
@@ -114,7 +114,7 @@ app.post('/api/congratulations', createCongratulation);
 app.get('/', getCongratulation);
 
 
-app.listen(3007, function () {
-  console.log(`Example app listening on port 3000`);
+app.listen(port, function () {
+  console.log(`Example app listening on port ${port}`);
 });
 

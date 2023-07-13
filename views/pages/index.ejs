@@ -3,67 +3,82 @@
 
 <head>
   <%- include('../partials/head'); %>
+    <link type="text/html" rel="stylesheet" href="../../node_modules/sakura-js/dist/sakura.min.css">
+
 </head>
 
 <body>
   <div class="page-wrapper layout-full">
-    <section id="section1" class="header__main">
-      <div class="slider">
-        <div class="slider-main">
-          <div class="slider-item">
-            <img
-              src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/Img-banner/0U8A7904-min_myr5wq"
-              alt="">
-          </div>
-          <div class="slider-item">
-            <img
-              src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/Img-banner/0U8A8212-min_hypahy_1_zbdf9l"
-              alt="">
-          </div>
-          <div class="slider-item">
-            <img
-              src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/Img-banner/0U8A8281-min_djohri"
-              alt="">
-          </div>
+    <div class="preloader">
+      <div class="line"></div>
+      <div class="loader">
+        <div class="one-loader first">
+          <div class="v-line first-line"></div>
+          <div class="circle first-circle"></div>
+        </div>
+        <div class="one-loader">
+          <div class="v-line middle-line"></div>
+          <div class="circle middle-circle"></div>
+        </div>
+        <div class="one-loader">
+          <div class="v-line middle-line"></div>
+          <div class="circle middle-circle"></div>
+        </div>
+        <div class="one-loader">
+          <div class="v-line middle-line"></div>
+          <div class="circle middle-circle"></div>
+        </div>
+        <div class="one-loader last">
+          <div class="v-line last-line"></div>
+          <div class="circle last-circle"></div>
         </div>
       </div>
+      <h1>Loading</h1>
+    </div>
+    <section id="section1" class="header__main">
+      <video style="width: 100%; height: 100%; object-fit: cover;" class="background" autoplay muted loop
+        poster="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689155655/wedding/section1/f8cnb8vhlexpkfpsc26f.jpg">
+        <source
+          src="https://res.cloudinary.com/dxy2muzyb/video/upload/v1689242662/wedding/video/bpbkqdmdvuzeukzqh3yn.mp4"
+          type="video/mp4" />
+      </video>
       <header id="header" class="banner_main">
         <div class="overlay"></div>
         <div class="container">
           <div class="row header_main_content">
             <div class="col-md-12 col-md-offset-2 text-center">
-              <h1 class="title"><span>Lê Hà</span>
+              <h2 class="title"><span>Lê Hà</span>
                 <span>&</span>
                 <span>Tiến Tùng</span>
-              </h1>
-              <h2>We Are Getting Married</h2>
-              <div id="countdown">
-                <div class="simbly-section">
-                  <div>
-                    <span class="simply-amount" id="days"></span>
-                    <span class="simply-word">days</span>
+                </h1>
+                <h2>We Are Getting Married</h2>
+                <div id="countdown">
+                  <div class="simbly-section">
+                    <div>
+                      <span class="simply-amount" id="days"></span>
+                      <span class="simply-word">days</span>
+                    </div>
+                  </div>
+                  <div class="simbly-section">
+                    <div>
+                      <span class="simply-amount" id="hours"></span>
+                      <span class="simply-word">hours</span>
+                    </div>
+                  </div>
+                  <div class="simbly-section">
+                    <div>
+                      <span class="simply-amount" id="minutes"></span>
+                      <span class="simply-word">minutes</span>
+                    </div>
+                  </div>
+                  <div class="simbly-section">
+                    <div>
+                      <span class="simply-amount" id="seconds"></span>
+                      <span class="simply-word">seconds</span>
+                    </div>
                   </div>
                 </div>
-                <div class="simbly-section">
-                  <div>
-                    <span class="simply-amount" id="hours"></span>
-                    <span class="simply-word">hours</span>
-                  </div>
-                </div>
-                <div class="simbly-section">
-                  <div>
-                    <span class="simply-amount" id="minutes"></span>
-                    <span class="simply-word">minutes</span>
-                  </div>
-                </div>
-                <div class="simbly-section">
-                  <div>
-                    <span class="simply-amount" id="seconds"></span>
-                    <span class="simply-word">seconds</span>
-                  </div>
-                </div>
-              </div>
-              <p><a href="#" class="btn btn-default btn-sm btn-save-date">Save the date</a></p>
+                <p><a href="#" class="btn btn-default btn-sm btn-save-date">Save the date</a></p>
             </div>
           </div>
         </div>
@@ -72,22 +87,23 @@
     <section id="section2">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-            <h2>Hello!</h2>
-            <h3>November 28th, 2016 New York, USA</h3>
-            <p>We invited you to celebrate our wedding</p>
+          <div class="title-heading">
+            <div class="wishes">
+              <h2>Cặp đôi</h2>
+              <i class="far fa-heart"></i>
+            </div>
           </div>
         </div>
         <div class="couple-wrap animate-box">
           <div class="couple-half">
             <div class="groom">
               <img
-                src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/Img-banner/2_yexoqo_1_evfamc"
+                src="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689156365/wedding/section2/yt61ihoiw84mvjfvaoj5.jpg"
                 alt="groom" class="img-responsive">
             </div>
             <div class="desc-groom">
               <h3>Lê Hà</h3>
-              <p>Không ngờ được" đó là câu nói tôi hay nói từ khi chúng tôi bắt đầu yêu và giờ thì... chúng tôi kết hôn
+              <p>Không ngờ được! đó là câu nói tôi hay nói từ khi chúng tôi bắt đầu yêu và giờ thì... chúng tôi kết hôn
                 rồi. Trải qua nhiều biến cố trong chuyện tình cảm tôi khá dè dặt khi lại 1 lần nữa bước chân vào cuộc
                 sống của anh. Và rồi... "Chốt thôi" ❤️❤️</p>
             </div>
@@ -96,7 +112,7 @@
           <div class="couple-half">
             <div class="bride">
               <img
-                src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/Img-banner/1_ljts0f_1_wxkxzl"
+                src="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689156407/wedding/section2/sjbpdyo2grqpop4x0ok0.jpg"
                 alt="groom" class="img-responsive">
             </div>
             <div class="desc-bride">
@@ -110,28 +126,18 @@
     </section>
     <section class="section-sub-header">
       <div class="elementor-background-overlay"></div>
-      <div class="elementor-container elementor-column-gap-no">
-        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3edd4aa"
-          data-id="3edd4aa" data-element_type="column">
-          <div class="elementor-widget-wrap elementor-element-populated">
-            <div class="elementor-element elementor-element-e7a7a9e elementor-widget elementor-widget-tmx-lavelo_cta"
-              data-id="e7a7a9e" data-element_type="widget" data-widget_type="tmx-lavelo_cta.default">
-              <div class="elementor-widget-container">
-                <div class="welcome-area">
-                  <div class="welcome-content">
-                    <h2>Chào mừng bạn đến với ngày trọng đại của chúng tôi</h2>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
-                      when
-                      looking at its layout. The point of using Lorem Ipsum is that it has a more-or less normal
-                      distribution
-                      of letters</p>
-                    <div class="btn"><a href="#section6" class="btn">Tham gia</a></div>
-                    <div class="btn"><a href="#" class="bank">Phong Bao Điện Tử</a></div>
-                    <div class="btn"><a href="#section3" class="popup-gmaps">Địa điểm</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div class="elementor-widget-wrap">
+        <div class="welcome-area">
+          <div class="welcome-content">
+            <h2>Chào mừng bạn đến với ngày trọng đại của chúng tôi</h2>
+            <p>Chào bạn, vào ngày 08:30 Ngày 05/08/2023 mình tổ chức hôn lễ. Vì điều kiện ở xa, mình không thể trực tiếp
+              đến gửi thiệp mời. Do đó, mình đành phải gửi lời mời tới bạn bằng cách này. Rất mong ngày đó bạn dành ít
+              thời gian đến tham dự đám cưới của tụi mình. Sự hiện diện của bạn chính là niềm hạnh phúc lớn nhất. Cám ơn
+              và mong bạn thông cảm!</p>
+            <div class="btn"><a href="#section6" class="btn">Tham gia</a></div>
+            <div class="btn"><button type="button" class="bank" data-toggle="modal" data-target="#bankInfo">Phong Bao
+                Điện Tử</button></div>
+            <div class="btn"><a href="#section3" class="popup-gmaps-button">Địa điểm</a></div>
           </div>
         </div>
       </div>
@@ -139,198 +145,106 @@
     <section id="section4" class="section-gray">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box fadeInUp animated-fast">
-            <span>Our Memories</span>
-            <h2>Wedding Gallery</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-              blind
-              texts.</p>
+          <div class="title-heading text-center">
+            <div class="wishes">
+              <h2>Bộ sưu tập</h2>
+              <i class="far fa-heart"></i>
+            </div>
           </div>
         </div>
-        <div class="row row-bottom-padded-md">
-          <div class="col-md-12">
-            <ul id="fh5co-gallery-list">
-              <li class="one-third animate-box fadeIn animated-fast" data-animate-effect="fadeIn"
-                style="background-image: url(https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-1/0U8A7793-min_xm6gez-min_i2m1ks) ">
-                <a href="javascript:void(0)" data-fancybox="gallery-1"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-1/0U8A7793-min_xm6gez-min_i2m1ks">
-                  <div class="case-studies-summary">
-                    <span>14 Photos</span>
-                    <h2>Two Glas of Juice</h2>
-                  </div>
-                </a>
-                <img src="javascript:void(0)" data-fancybox="gallery-1"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-1/0U8A7789-min_axn4hd-min_vppjwi"
-                  style="display: none;" />
-                <img src="javascript:void(0)" data-fancybox="gallery-1"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-1/0U8A7799-min_fqwqx6-min_kd2d0p"
-                  style="display: none;" />
-              </li>
-              <li class="one-third animate-box fadeIn animated-fast" data-animate-effect="fadeIn"
-                style="background-image: url(https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-2/0U8A7865-min_rtsgdt-min_n7ohqj)">
-                <a href="javascript:void(0)" data-fancybox="gallery-2"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-2/0U8A7865-min_rtsgdt-min_n7ohqj"
-                  class="color-2">
-                  <div class="case-studies-summary">
-                    <span>30 Photos</span>
-                    <h2>Timer starts now!</h2>
-                  </div>
-                </a>
-                <img src="javascript:void(0)" data-fancybox="gallery-2"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-2/0U8A7908-min_tkyp8e-min_sztjlt"
-                  style="display: none;" />
-                <img src="javascript:void(0)" data-fancybox="gallery-2"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-2/0U8A7847-min_wlwuav-min_dlcwxq"
-                  style="display: none;" />
-                <img src="javascript:void(0)" data-fancybox="gallery-2"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-2/0U8A7851-min_c7eoqn-min_a41vu8"
-                  style="display: none;" />
-
-              </li>
-
-
-              <li class="one-third animate-box fadeIn animated-fast" data-animate-effect="fadeIn"
-                style="background-image: url(https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-3/0U8A8007-min_t7bp4a-min_qri7uf); ">
-                <a href="javascript:void(0)" data-fancybox="gallery-3"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-3/0U8A8007-min_t7bp4a-min_qri7uf"
-                  class="color-3">
-                  <div class="case-studies-summary">
-                    <span>90 Photos</span>
-                    <h2>Beautiful sunset</h2>
-                  </div>
-                </a>
-                <img src="javascript:void(0)" data-fancybox="gallery-3"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-3/0U8A8006-min_b1jbws-min_hj2lfi"
-                  style="display: none;" />
-                <img src="javascript:void(0)" data-fancybox="gallery-3"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-3/0U8A8012-min_rkt2xp-min_ebgeuo"
-                  style="display: none;" />
-                <img src="javascript:void(0)" data-fancybox="gallery-3"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-3/0U8A8011-min_naqpml-min_kv8o1l"
-                  style="display: none;" />
-              </li>
-              <li class="one-third animate-box fadeIn animated-fast" data-animate-effect="fadeIn"
-                style="background-image: url(https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-4/4-min_pdf51i-min_ms0vbw); ">
-                <a href="javascript:void(0)" data-fancybox="gallery-4"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-4/4-min_pdf51i-min_ms0vbw"
-                  class="color-4">
-                  <div class="case-studies-summary">
-                    <span>12 Photos</span>
-                    <h2>Company's Conference Room</h2>
-                  </div>
-                </a>
-                <img src="javascript:void(0)" data-fancybox="gallery-4"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-4/0U8A8281-min_sh1fj5-min_es9gcd"
-                  style="display: none;" />
-                <img src="javascript:void(0)" data-fancybox="gallery-4"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-4/0U8A8285-min_yoievl-min_cvgg4s"
-                  style="display: none;" />
-                <img src="javascript:void(0)" data-fancybox="gallery-4"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-4/0U8A8283-min_ybj1jk-min_qkcknv"
-                  style="display: none;" />
-              </li>
-
-              <li class="one-third animate-box fadeIn animated-fast" data-animate-effect="fadeIn"
-                style="background-image: url(https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-5/0U8A8313-min_devg9z-min_nnrydf); ">
-                <a href="javascript:void(0)" data-fancybox="gallery-5"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-5/0U8A8313-min_devg9z-min_nnrydf"
-                  class="color-3">
-                  <div class="case-studies-summary">
-                    <span>50 Photos</span>
-                    <h2>Useful baskets</h2>
-                  </div>
-                </a>
-                <img src="javascript:void(0)" data-fancybox="gallery-5"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-5/0U8A8299-min_mwu8ci-min_tri0yk"
-                  style="display: none;" />
-                <img src="javascript:void(0)" data-fancybox="gallery-5"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-5/0U8A8306-min_r7zhdp-min_gi7pcy"
-                  style="display: none;" />
-              </li>
-              <li class="one-third animate-box fadeIn animated-fast" data-animate-effect="fadeIn"
-                style="background-image: url(https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-6/0U8A8330-min_tf6bmw-min_o19uck); ">
-                <a href="javascript:void(0)" data-fancybox="gallery-6"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-6/0U8A8330-min_tf6bmw-min_o19uck"
-                  class="color-4">
-                  <div class="case-studies-summary">
-                    <span>45 Photos</span>
-                    <h2>Skater man in the road</h2>
-                  </div>
-                </a>
-                <img src="javascript:void(0)" data-fancybox="gallery-6"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-6/0U8A8328-min_raeclc-min_jwbs0o"
-                  style="display: none;" />
-                <img src="javascript:void(0)" data-fancybox="gallery-6"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-6/0U8A8322-min_wctl9o-min_pzxqxt"
-                  style="display: none;" />
-                <img src="javascript:void(0)" data-fancybox="gallery-6"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-6/0U8A8324-min_uyfefw-min_v9ydvc"
-                  style="display: none;" />
-              </li>
-
-              <li class="one-third animate-box" data-animate-effect="fadeIn"
-                style="background-image: url(https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-7/0U8A8218-min_xavx19-min_fxk6z7); ">
-                <a href="javascript:void(0)" data-fancybox="gallery-7"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-7/0U8A8218-min_xavx19-min_fxk6z7"
-                  class="color-4">
-                  <div class="case-studies-summary">
-                    <span>35 Photos</span>
-                    <h2>Two Glas of Juice</h2>
-                  </div>
-                </a>
-                <img src="javascript:void(0)" data-fancybox="gallery-7"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-7/0U8A8234-min_vdp6vo-min_ii1b1p"
-                  style="display: none;" />
-                <img src="javascript:void(0)" data-fancybox="gallery-7"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-7/0U8A8226-min_xfmxh7-min_wrpn1t"
-                  style="display: none;" />
-                <img src="javascript:void(0)" data-fancybox="gallery-7"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-7/0U8A8230-min_ck64cr-min_cknsh4"
-                  style="display: none;" />
-                <img src="javascript:void(0)" data-fancybox="gallery-7"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-7/0U8A8227-min_s0b4fi-min_pcptze"
-                  style="display: none;" />
-              </li>
-
-              <li class="one-third animate-box" data-animate-effect="fadeIn"
-                style="background-image: url(https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-8/0U8A7737-min_xnx5ya-min_dk4umu); ">
-                <a href="javascript:void(0)" data-fancybox="gallery-8"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-8/0U8A7737-min_xnx5ya-min_dk4umu"
-                  class="color-5">
-                  <div class="case-studies-summary">
-                    <span>90 Photos</span>
-                    <h2>Timer starts now!</h2>
-                  </div>
-                </a>
-                <img src="javascript:void(0)" data-fancybox="gallery-8"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-8/0U8A7725-min_xsaoo5-min_kh3zim"
-                  style="display: none;" />
-                <img src="javascript:void(0)" data-fancybox="gallery-8"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-8/0U8A7734-min_bwlv4j-min_oqhmxe"
-                  style="display: none;" />
-                <img src="javascript:void(0)" data-fancybox="gallery-8"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-8/0U8A7728-min_qstwal-min_rqwtat"
-                  style="display: none;" />
-              </li>
-              <li class="one-third animate-box" data-animate-effect="fadeIn"
-                style="background-image: url(https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-9/0U8A7766-min_osjgjo-min_spxokt); ">
-                <a href="javascript:void(0)" data-fancybox="gallery-9"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-9/0U8A7766-min_osjgjo-min_spxokt"
-                  class="color-6">
-                  <div class="case-studies-summary">
-                    <span>56 Photos</span>
-                    <h2>Beautiful sunset</h2>
-                  </div>
-                </a>
-                <img src="javascript:void(0)" data-fancybox="gallery-9"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-9/0U8A7765-min_ljrzwh-min_ogbdxq"
-                  style="display: none;" />
-                <img src="javascript:void(0)" data-fancybox="gallery-9"
-                  data-src="https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/gallery-9/0U8A7773-min_o6wz3y-min_wrp0qc"
-                  style="display: none;" />
-              </li>
-            </ul>
-          </div>
+        <div class="gallery-list-main">
+          <ul id="gallery-list" class="gallery-list">
+            <li class="gallery-item">
+              <a class="item-fancy"
+                href="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689221705/wedding/section4/lnud5lkkjtxdcpufowhr.jpg"
+                data-fancybox="gallery-1">
+                <img
+                  src="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689221705/wedding/section4/lnud5lkkjtxdcpufowhr.jpg"
+                  class="img-item" />
+                <div class="icon-hover"><img src="/images/icon/icons8-birds.png" /></div>
+              </a>
+            </li>
+            <li class="gallery-item">
+              <a class="item-fancy"
+                href="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689221705/wedding/section4/hbwbw4bqp0igi2724ez9.jpg"
+                data-fancybox="gallery-1">
+                <img
+                  src="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689221705/wedding/section4/hbwbw4bqp0igi2724ez9.jpg"
+                  class="img-item" />
+                <div class="icon-hover"><img src="/images/icon/icons8-birds.png" /></div>
+              </a>
+            </li>
+            <li class="gallery-item">
+              <a class="item-fancy"
+                href="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689221705/wedding/section4/ebj0qe89trqwiccpo9gd.jpg"
+                data-fancybox="gallery-1">
+                <img
+                  src="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689221705/wedding/section4/ebj0qe89trqwiccpo9gd.jpg"
+                  class="img-item" />
+                <div class="icon-hover"><img src="/images/icon/icons8-birds.png" /></div>
+              </a>
+            </li>
+            <li class="gallery-item">
+              <a class="item-fancy"
+                href="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689221704/wedding/section4/nbqrvwzohb0zqdwkc7v8.jpg"
+                data-fancybox="gallery-1">
+                <img
+                  src="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689221704/wedding/section4/nbqrvwzohb0zqdwkc7v8.jpg"
+                  class="img-item" />
+                <div class="icon-hover"><img src="/images/icon/icons8-birds.png" /></div>
+              </a>
+            </li>
+            <li class="gallery-item">
+              <a class="item-fancy"
+                href="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689221704/wedding/section4/v78qyztoyttesizsgxh0.jpg"
+                data-fancybox="gallery-1">
+                <img
+                  src="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689221704/wedding/section4/v78qyztoyttesizsgxh0.jpg"
+                  class="img-item" />
+                <div class="icon-hover"><img src="/images/icon/icons8-birds.png" /></div>
+              </a>
+            </li>
+            <li class="gallery-item">
+              <a class="item-fancy"
+                href="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689221704/wedding/section4/fxyilb8lajldhjxdseap.jpg"
+                data-fancybox="gallery-1">
+                <img
+                  src="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689221704/wedding/section4/fxyilb8lajldhjxdseap.jpg"
+                  class="img-item" />
+                <div class="icon-hover"><img src="/images/icon/icons8-birds.png" /></div>
+              </a>
+            </li>
+            <li class="gallery-item">
+              <a class="item-fancy"
+                href="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689221704/wedding/section4/yg79tadsxwukokblclse.jpg"
+                data-fancybox="gallery-1">
+                <img
+                  src="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689221704/wedding/section4/yg79tadsxwukokblclse.jpg"
+                  class="img-item" />
+                <div class="icon-hover"><img src="/images/icon/icons8-birds.png" /></div>
+              </a>
+            </li>
+            <li class="gallery-item">
+              <a class="item-fancy"
+                href="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689221704/wedding/section4/g6ehjqks9bktkoioouhz.jpg"
+                data-fancybox="gallery-1">
+                <img
+                  src="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689221704/wedding/section4/g6ehjqks9bktkoioouhz.jpg"
+                  class="img-item" />
+                <div class="icon-hover"><img src="/images/icon/icons8-birds.png" /></div>
+              </a>
+            </li>
+            <li class="gallery-item">
+              <a class="item-fancy"
+                href="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689221704/wedding/section4/viwvyhpph33da9wuknwx.jpg"
+                data-fancybox="gallery-1">
+                <img
+                  src="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689221704/wedding/section4/viwvyhpph33da9wuknwx.jpg"
+                  class="img-item" />
+                <div class="icon-hover"><img src="/images/icon/icons8-birds.png" /></div>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -338,239 +252,329 @@
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
-          <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box fadeInUp animated-fast">
-            <span>Our Special Events</span>
-            <h2>Wedding Events</h2>
+          <div class="title-heading">
+            <div class="wishes">
+              <h2>Sự kiện đặc biệt của chúng tôi</h2>
+              <i class="far fa-heart"></i>
+            </div>
           </div>
         </div>
         <div class="row">
           <div class="event-mb">
             <div class="col-md-4 col-sm-4 text-center">
-              <div class="event-wrap animate-box fadeInUp animated-fast">
+              <div class="event-wrap">
+                <span class="icon flaticon-church">
+                  <img src="/images/icon/church.png" alt="church" />
+                </span>
                 <h3>Lễ nạp tài</h3>
-                <div class="time-event">
-                  <i class="fas fa-clock"></i>
-                  <span>Thứ 5, 08h30 - Ngày 03/08/2023 tức ngày 17 tháng 06 năm Quý Mão</span>
-                </div>
-                <div class="location-event">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <span> Thôn 5, Xã Vân Sơn, Huyện Triệu Sơn, Tỉnh Thanh Hóa </span>
-                </div>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                  live the
-                  blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
-                  language
-                  ocean.</p>
-                <a class="enent-link popup-gmaps" href="https://goo.gl/maps/HRdLGPVivM7a8gnF7" target="_blank">
-                  Xem Địa Điểm
-                </a>
+                <p><span>Thứ 5, 08h30 - Ngày 03/08/2023</span><span>tức ngày 17 tháng 06 năm Quý Mão</span></p>
+                <p><span>Thôn 5, Xã Vân Sơn, Huyện Triệu Sơn, Tỉnh Thanh Hóa</span></p>
+                <p><a href="tel:+84337458984">0337458984</a></p>
+                <p class="locationMain">
+                  <a class="enent-link popup-gmaps" href="https://goo.gl/maps/HRdLGPVivM7a8gnF7" target="_blank">
+                    Xem Địa Điểm Nhà Gái
+                  </a>
+                </p>
               </div>
             </div>
             <div class="col-md-4 col-sm-4 text-center">
-              <div class="event-wrap animate-box fadeInUp animated-fast">
+              <div class="event-wrap">
+                <span class="icon flaticon-reception-bell">
+                  <img src="/images/icon/reception-bell.png" alt="bell" />
+                </span>
                 <h3>Tiệc cưới</h3>
-                <div class="time-event">
-                  <i class="fas fa-clock"></i>
-                  <span>Thứ 5, 08h30 - Ngày 03/08/2023 tức ngày 17 tháng 06 năm Quý Mão</span>
-                </div>
-                <div class="location-event">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <span> Thôn 5, Xã Vân Sơn, Huyện Triệu Sơn, Tỉnh Thanh Hóa </span>
-                </div>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                  live the
-                  blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
-                  language
-                  ocean.</p>
-                <a class="enent-link popup-gmaps" href="https://goo.gl/maps/HRdLGPVivM7a8gnF7" target="_blank">
-                  Xem Địa Điểm
-                </a>
+                <p><span>Thứ 6 - Ngày 04/08/2023</span><span>tức ngày 18 tháng 06 năm Quý Mão</span></p>
+                <p><span>Xã Vân Sơn, Huyện Triệu Sơn, Tỉnh Thanh Hóa</span></p>
+                <p><a href="#">+0 (123) 456 78 910</a></p>
+                <p class="location">
+                  <a class="enent-link female popup-gmaps" href="https://goo.gl/maps/HRdLGPVivM7a8gnF7" target="_blank">
+                    Xem Địa Điểm Nhà Gái
+                  </a>
+                  <a class="enent-link male popup-gmaps" href="https://goo.gl/maps/HRdLGPVivM7a8gnF7" target="_blank">
+                    Xem Địa Điểm Nhà Trai
+                  </a>
+                </p>
               </div>
             </div>
             <div class="col-md-4 col-sm-4 text-center">
-              <div class="event-wrap animate-box fadeInUp animated-fast">
+              <div class="event-wrap">
+                <span class="icon flaticon-wedding-kiss">
+                  <img src="/images/icon/ceremony.png" alt="kiss" />
+                </span>
                 <h3>Lễ thành hôn</h3>
-                <div class="time-event">
-                  <i class="fas fa-clock"></i>
-                  <span>Thứ 7, 08h30 - Ngày 05/08/2023 tức ngày 19 tháng 06 năm Quý Mão</span>
-                </div>
-                <div class="location-event">
-                  <i class="fas fa-map-marker-alt"></i>
-                  <span> Thôn 5, Xã Vân Sơn, Huyện Triệu Sơn, Tỉnh Thanh Hóa </span>
-                </div>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                  live the
-                  blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
-                  language
-                  ocean.</p>
-                <a class="enent-link popup-gmaps" href="https://goo.gl/maps/HRdLGPVivM7a8gnF7" target="_blank">
-                  Xem Địa Điểm
-                </a>
+                <p><span>Thứ 7, 08h30 - Ngày 05/08/2023</span><span>tức ngày 19 tháng 06 năm Quý Mão</span></p>
+                <p><span>Thôn 4, Xã Vân Sơn, Huyện Triệu Sơn, Tỉnh Thanh Hóa</span></p>
+                <p><a href="#">+0 (123) 456 78 910</a></p>
+                <p class="locationMain">
+                  <a class="enent-link popup-gmaps" href="https://goo.gl/maps/HRdLGPVivM7a8gnF7" target="_blank">
+                    Xem Địa Điểm Nhà Trai
+                  </a>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="section5" class="testimonial">
-      <div class="container">
-        <div class="row box_slide">
-          <div class="row animate-box fadeInUp animated-fast">
-            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-              <span>Best Wishes</span>
-              <h2>Friends Wishes</h2>
+    <% if(congra) { %>
+      <section id="section5" class="testimonial">
+        <div class="container" style="padding-left: 0px; padding-right: 0px;">
+          <div class="row box_slide">
+            <div class="row animate-box fadeInUp animated-fast">
+              <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <div class="wishes">
+                  <h2>Lời chúc</h2>
+                  <i class="far fa-heart"></i>
+                </div>
+              </div>
+            </div>
+            <div class="row slider">
+              <% congra.forEach((congratulation)=> {
+                if (congratulation.isVisible) {
+                %>
+                <div class="image-slider">
+                  <div class="item">
+                    <div class="testimony-slide text-center">
+                      <figure>
+                        <img src="<%= congratulation.image == '' ? '/images/icon/user.png' : congratulation.image  %>"
+                          alt="user" style="object-fit: cover;">
+                      </figure>
+                      <span>
+                        <%= congratulation.name %>
+                      </span>
+                      <blockquote>
+                        <p>
+                          <%= congratulation.greetings %>
+                        </p>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+                <% } }); %>
             </div>
           </div>
-          <div class="row slider">
-            <% congra.forEach((congratulation)=> {
-              if (congratulation.isVisible) {
-              %>
-              <div class="image-slider">
-                <div class="item">
-                  <div class="testimony-slide text-center">
-                    <figure>
-                      <img src="<%= congratulation.image == '' ? '/images/icon/user.png' : congratulation.image  %>"
-                        alt="user" style="object-fit: cover;">
-                    </figure>
-                    <span>
-                      <%= congratulation.name %>
-                    </span>
-                    <blockquote>
-                      <p>
-                        <%= congratulation.greetings %>
-                      </p>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-              <% } }); %>
-          </div>
         </div>
-      </div>
-    </section>
-    <section id="section6">
-      <div class="container guest-wrap">
-        <div class="col-12">
-          <div class="contact-title text-center">
-            <h2>Tham dự cùng chúng tôi nhé?</h2>
-            <p>Sự hiện diện của quý vị chính là niềm vui của gia đình chúng
-              tôi.</p>
-            <p>Rất hân hạnh được đón tiếp.</p>
-          </div>
-        </div>
-        <div class="contact-form form-style">
-          <div role="form" id="form" lang="en-US" dir="ltr">
-            <form id="wedding-form" action="#" method="POST" class="form invalid" novalidate="novalidate"
-              data-status="invalid">
-              <div style="display: none;">
-                <input type="hidden" name="_wpcf7" value="230">
-                <input type="hidden" name="_wpcf7_version" value="5.6.4">
-                <input type="hidden" name="_wpcf7_locale" value="en_US">
-                <input type="hidden" name="_wpcf7_unit_tag" value="form">
-                <input type="hidden" name="_wpcf7_container_post" value="7">
-                <input type="hidden" name="_wpcf7_posted_data_hash" value="">
-                <input type="hidden" name="_wpcf7_recaptcha_response" value="">
+      </section>
+      <% } %>
+        <section id="section6">
+          <div class="container guest-wrap">
+            <div class="col-12">
+              <div class="contact-title text-center">
+                <h2>Tham dự cùng chúng tôi nhé?</h2>
+                <p>Sự hiện diện của quý vị chính là niềm vui của gia đình chúng
+                  tôi.</p>
+                <p>Rất hân hạnh được đón tiếp.</p>
               </div>
-              <div class="container">
-                <!-- <h1>jQuery Profile Upload
-                  <small>with preview</small>
-                </h1> -->
-                <div class="avatar-upload">
-                  <div class="avatar-edit">
-                    <input type='file' id="readUrl" accept=".png, .jpg, .jpeg" />
-                    <label for="readUrl">
-                      <i class="fas fa-pen"></i>
-                    </label>
+            </div>
+            <div class="contact-form form-style">
+              <div role="form" id="form" lang="en-US" dir="ltr">
+                <form id="wedding-form" action="#" method="POST" class="form invalid" novalidate="novalidate"
+                  data-status="invalid">
+                  <div style="display: none;">
+                    <input type="hidden" name="_wpcf7" value="230">
+                    <input type="hidden" name="_wpcf7_version" value="5.6.4">
+                    <input type="hidden" name="_wpcf7_locale" value="en_US">
+                    <input type="hidden" name="_wpcf7_unit_tag" value="form">
+                    <input type="hidden" name="_wpcf7_container_post" value="7">
+                    <input type="hidden" name="_wpcf7_posted_data_hash" value="">
+                    <input type="hidden" name="_wpcf7_recaptcha_response" value="">
                   </div>
-                  <div class="avatar-preview">
-                    <img id="uploadedImage" src="/images/icon/user.png" alt="Uploaded Image"
-                      accept="image/png, image/jpeg"
-                      style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;" data-name="upload">
+                  <div class="container">
+                    <div class="avatar-upload">
+                      <div class="avatar-edit">
+                        <input type='file' id="readUrl" accept=".png, .jpg, .jpeg" />
+                        <label for="readUrl">
+                          <i class="fas fa-pen"></i>
+                        </label>
+                      </div>
+                      <div class="avatar-preview">
+                        <img id="uploadedImage" src="/images/icon/user.png" alt="Uploaded Image"
+                          accept="image/png, image/jpeg"
+                          style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;" data-name="upload">
+                      </div>
+                    </div>
                   </div>
-                </div>
+                  <div class="row">
+                    <div class="col-12 col-sm-6">
+                      <div class="form-control-wrap" data-name="name">
+                        <input id="username" type="text" name="name" value="" size="40"
+                          class="form-control text-control validates-as-required valid" aria-required="true"
+                          aria-invalid="false" placeholder="Tên của bạn">
+                        <small></small>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <div class="form-control-wrap" data-name="phone">
+                        <input id="phone" type="text" name="phone" value="" size="40"
+                          class="form-control text-control validates-as-required valid" aria-required="true"
+                          aria-invalid="false" placeholder="Số điện thoại">
+                        <small></small>
+                      </div>
+                    </div>
+                    <div class="col col-sm-6">
+                      <span class="form-control-wrap" data-name="number">
+                        <select name="number" class="form-control select-control validates-as-required valid"
+                          aria-required="true" aria-invalid="false">
+                          <option value="NO">Tệp đính kèm</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                        </select>
+                      </span>
+                    </div>
+                    <div class="col col-sm-6">
+                      <span class="form-control-wrap" data-name="event">
+                        <select name="event" class="form-control select validates-as-required form-control valid"
+                          aria-required="true" aria-invalid="false">
+                          <option value="All">Tất cả sự kiện</option>
+                          <option value="1">Nạp Tài</option>
+                          <option value="2">Tiệc cưới</option>
+                          <option value="3">Thành hôn</option>
+                        </select>
+                      </span>
+                    </div>
+                    <div class="col-md-12" style="margin-top: 20px;">
+                      <span class="form-control-wrap" data-name="greetings">
+                        <span style="margin-bottom: 5px !important;">Bạn có lời chúc nào cho chúng tôi không?</span>
+                        <textarea style="margin-top: 5px" name="greetings" cols="40" rows="10"
+                          class="form-control textarea validates-as-required contact-textarea valid"
+                          aria-required="true" aria-invalid="false"
+                          placeholder="Bạn có thể cho chúng tôi một lời chúc không?"></textarea><label for="greetings"
+                          generated="true" class="error" style="display: none;">Please enter at least 10
+                          characters.</label>
+                      </span>
+                    </div>
+                    <div class="col-md-12 text-center input-row">
+                      <input id="submit-form" type="submit" value="Gửi Lời Tham Gia"
+                        class="form-control has-spinner submit submit"><span class="spinner"></span>
+                    </div>
+                  </div>
+                </form>
               </div>
-              <div class="row">
-                <div class="col-12 col-sm-6">
-                  <div class="form-control-wrap" data-name="name">
-                    <input id="username" type="text" name="name" value="" size="40"
-                      class="form-control text-control validates-as-required valid" aria-required="true"
-                      aria-invalid="false" placeholder="Tên của bạn">
-                    <small></small>
-                  </div>
-                </div>
-                <div class="col-12 col-sm-6">
-                  <div class="form-control-wrap" data-name="phone">
-                    <input id="phone" type="text" name="phone" value="" size="40"
-                      class="form-control text-control validates-as-required valid" aria-required="true"
-                      aria-invalid="false" placeholder="Số điện thoại">
-                    <small></small>
-                  </div>
-                </div>
-                <div class="col col-sm-6">
-                  <span class="form-control-wrap" data-name="number">
-                    <select name="number" class="form-control select-control validates-as-required valid"
-                      aria-required="true" aria-invalid="false">
-                      <option value="NO">Tệp đính kèm</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                    </select>
-                  </span>
-                </div>
-                <div class="col col-sm-6">
-                  <span class="form-control-wrap" data-name="event">
-                    <select name="event" class="form-control select validates-as-required form-control valid"
-                      aria-required="true" aria-invalid="false">
-                      <option value="All">Tất cả sự kiện</option>
-                      <option value="1">Nạp Tài</option>
-                      <option value="2">Tiệc cưới</option>
-                      <option value="3">Thành hôn</option>
-                    </select>
-                  </span>
-                </div>
-                <div class="col-md-12" style="margin-top: 20px;">
-                  <span class="form-control-wrap" data-name="greetings">
-                    <span style="margin-bottom: 5px !important;">Bạn có lời chúc nào cho chúng tôi không?</span>
-                    <textarea style="margin-top: 5px" name="greetings" cols="40" rows="10"
-                      class="form-control textarea validates-as-required contact-textarea valid" aria-required="true"
-                      aria-invalid="false" placeholder="Bạn có thể cho chúng tôi một lời chúc không?"></textarea><label
-                      for="greetings" generated="true" class="error" style="display: none;">Please enter at least 10
-                      characters.</label>
-                  </span>
-                </div>
-                <div class="col-md-12 text-center input-row">
-                  <input id="submit-form" type="submit" value="Gửi Lời Tham Gia"
-                    class="form-control has-spinner submit submit"><span class="spinner"></span>
-                </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-sub">
+          <div class="wishes">
+            <h2>Lời cảm ơn</h2>
+            <i class="far fa-heart"></i>
+          </div>
+        </section>
+        <section id="section7">
+          <div class="footer-area">
+            <div class="footer-content">
+              <div class="content-sub">
+                <h2>Cảm Ơn</h2><span>Vì Đã Đến Với Chúng Tôi</span>
               </div>
-            </form>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
-    <section class="section-sub">
-      <div class="wishes">
-        <h2>Lời chúc</h2>
-        <i class="far fa-heart"></i>
-      </div>
-    </section>
-    <section id="section7">
-      <div class="footer-area">
-        <div class="footer-content">
-          <div class="content-sub">
-            <h2>Cảm Ơn</h2><span>Vì Đã Đến Với Chúng Tôi</span>
-          </div>
-        </div>
-      </div>
-    </section>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.js"></script>
-    <%- include('../partials/script'); %>
+        </section>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.js"></script>
+        <%- include('../partials/script'); %>
   </div>
   <footer>
     <%- include('../partials/footer'); %>
   </footer>
+  <div class="modal fade" id="bankInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Phong bao điện tử</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="card-body">
+            <div class="row justify-content-center mb-5">
+              <div class="col-lg-5">
+                <div class="text-center faq-title pt-4 pb-4">
+                  <div class="pt-3 pb-3"><i class="ti-comments text-primary h3"></i></div>
+                  <h5>Nếu bạn không thể tham gia tiệc cưới?</h5>
+                  <p class="text-muted">Dưới đây là một số thông tin về tài khoản ngân hàng chúng tôi.</p>
+                  <a href="tel:0337458984">
+                    <button type="button" class="btn btn-success m-t-10 waves-effect waves-light">
+                      Gọi cho tôi
+                    </button>
+                  </a>
 
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-5  pt-3">
+                <h5 class="mt-0 font-18 mb-4"><i class="fas fa-male"></i>
+                  Nhà trai
+                </h5>
+                <div class="accordion" id="accordionExample">
+                  <div class="card mb-0">
+                    <a data-toggle="collapse" href="#collapse_0" class="faq collapsed" aria-expanded="true"
+                      aria-controls="collapse_0">
+                      <div class="card-header text-dark" id="heading_0">
+                        <h6 class="m-0 faq-question">BIDV</h6>
+                      </div>
+                    </a>
+                    <div id="collapse_0" class="collapse show" aria-labelledby="heading_0"
+                      data-parent="#accordionExample">
+                      <div class="card-body copy">
+                        <p class="text-muted mb-0 faq-ans">
+                          STK: <b>50110000615609</b>
+                          <br>
+                          NAME: TRAN TIEN TUNG
+                          <br>
+                          <img
+                            src="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689265371/wedding/bank/r0qxaxlqhwkvfkmbu4c6.png"
+                            alt="bank" style="width: 190px; height: 190px;" />
+                        </p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-5 offset-lg-1 pt-3">
+                <h5 class="mt-0 font-18 mb-4"><i class="fas fa-female"></i>
+                  Nhà gái
+                </h5>
+                <div class="accordion" id="accordionExample2">
+                  <div class="card mb-0">
+                    <a data-toggle="collapse" href="#collapse_4" class="faq collapsed" aria-expanded="true"
+                      aria-controls="collapse_4">
+                      <div class="card-header text-dark" id="heading_4">
+                        <h6 class="m-0 faq-question">MBBank</h6>
+                      </div>
+                    </a>
+                    <div id="collapse_4" class="collapse show" aria-labelledby="heading_4"
+                      data-parent="#accordionExample2">
+                      <div class="card-body copy">
+                        <p class="text-muted mb-0 faq-ans">
+                          STK: <b>8280102190598</b>
+                          <br>
+                          NAME: LE THI HA
+                          <br>
+                          <img
+                            src="https://res.cloudinary.com/dxy2muzyb/image/upload/v1689265371/wedding/bank/dcjn5meskon0xxeeppan.png"
+                            alt="bank" style="width: 192px; height: 192px;" />
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener("load", function () {
+      var preloader = document.querySelector(".preloader");
+      preloader.style.display = "none";
+    });
+  </script>
 </body>
 
 </html>

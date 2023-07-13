@@ -25,79 +25,42 @@
 
 
     #section2 .couple-half {
-
         width: 100%;
-
     }
 
     #section3 {
-
         height: auto !important;
-
     }
 
     .event-mb {
-
         display: block;
-
     }
 
     .event-wrap {
-
         position: relative;
-
         margin-bottom: 15px;
-
     }
 
     #section3 .display-t {
-
         height: inherit;
-
     }
 
     #section3 .display-tc {
-
         height: inherit;
-
     }
 
     .heart {
-
         display: none;
-
     }
 
-    #fh5co-gallery-list li.one-third {
-
-        width: 49%;
-
-    }
 
     .fh5co-heading {
         margin-bottom: 3em;
     }
 
     .fh5co-heading h2 {
-
         font-size: 40px;
-
     }
-
-    #fh5co-gallery-list li a .case-studies-summary {
-
-        bottom: 1em;
-
-        left: 1em;
-
-        right: 1em;
-
-    }
-
-        #fh5co-gallery-list {
-            display: block;
-            width: 196%;
-        }
 
     .testimonial .testimony-slide blockquote {
 
@@ -106,14 +69,12 @@
     }
 
     .contact-title h2 {
-
         font-size: 40px;
 
     }
 
     #section5 {
-
-        padding: 3em 0;
+        padding: 2em 0;
 
     }
 
@@ -151,4 +112,23 @@
         background-size: cover;
         object-fit: cover;
     }
+
+    /* section4 */
+
+    .gallery-list {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 140vw;
+        grid-gap: 2vw;
+    }
+
+    /* end section4 */
+
+    /* section6 */
+    .guest-wrap {
+        padding: 20px;
+        margin: 20px auto
+    }
+
+    /* end section6 */
+
 }

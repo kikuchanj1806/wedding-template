@@ -8,6 +8,194 @@
     }
 }
 
+
+:root {
+    --primaryColor: #744253;
+    --lightPink: #F3D9DC;
+    --darkPink: #C78283;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tilt Prism', cursive;
+    background: #f2eee6;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.line {
+    height: 16px;
+    width: 150px;
+    border-radius: 20px;
+    background-color: var(--primaryColor);
+}
+
+.loader {
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+}
+
+.one-loader {
+    position: relative;
+    height: 125px;
+}
+
+.v-line {
+    width: 4px;
+    height: 100px;
+    background-color: var(--primaryColor);
+    position: absolute;
+}
+
+.circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--lightPink);
+    position: absolute;
+    border: 2px solid var(--darkPink);
+    bottom: 0;
+    left: -12.5px;
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    height: 12.5px;
+    width: 4px;
+    border-radius: 100%;
+    transform: rotate(45deg);
+    left: 4px;
+}
+
+h1 {
+    color: var(--darkPink);
+    animation: load .5s alternate infinite linear;
+}
+
+/* Animation */
+.first-line {
+    animation: move-line 1s infinite;
+}
+
+.first-circle {
+    animation: move-circle 1s infinite;
+}
+
+.last-line {
+    animation: move-line-last 1s infinite;
+    animation-delay: .5s;
+}
+
+.last-circle {
+    animation: move-circle-last 1s infinite;
+    animation-delay: .5s;
+}
+
+.middle-circle {
+    animation: shake-circle .5s infinite;
+    animation-delay: .5s;
+}
+
+.middle-line {
+    animation: shake-line .5s infinite;
+    animation-delay: .5s;
+}
+
+@keyframes load {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes move-circle {
+    25% {
+        transform: translateX(-70px) translateY(-40px);
+    }
+
+    50% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes move-line {
+    25% {
+        transform: rotate(40deg) translateX(-40px);
+    }
+
+    50% {
+        transform: rotate(0) translateX(0);
+    }
+}
+
+@keyframes move-circle-last {
+    25% {
+        transform: translateX(70px) translateY(-40px);
+    }
+
+    50% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes move-line-last {
+    25% {
+        transform: rotate(-40deg) translateX(40px);
+    }
+
+    50% {
+        transform: rotate(0) translateX(0);
+    }
+}
+
+@keyframes shake-circle {
+    16% {
+        transform: translateX(-1px);
+    }
+
+    32% {
+        transform: translateX(1px);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes shake-line {
+    16% {
+        transform: rotate(1deg) translateX(-1px);
+    }
+
+    32% {
+        transform: rotate(-1deg) translateX(1px);
+    }
+
+    50% {
+        transform: rotate(0) translateX(0);
+    }
+}
+
 h3 {
     color: #000;
     font-family: "Work Sans", Arial, sans-serif;
@@ -25,6 +213,23 @@ p {
 
 ul {
     padding: 0;
+}
+
+.title-heading {
+    margin: 25px auto;
+}
+
+blockquote {
+    border: none;
+    margin: 30px auto;
+    width: 50%;
+    position: relative;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 17.5px;
 }
 
 #section1 {
@@ -76,7 +281,7 @@ ul {
     font-size: 30px;
 }
 
-.col-md-offset-2>h1.title {
+.col-md-offset-2>h2.title {
     margin-bottom: 0px;
     font-size: 80px;
     line-height: 1.5;
@@ -252,7 +457,7 @@ li {
     display: inline-block;
     font-size: 1.5em;
     list-style-type: none;
-    padding: 1em;
+    padding: 8px;
     text-transform: uppercase;
 }
 
@@ -325,7 +530,7 @@ li span {
 .desc-bride p,
 .desc-groom p {
     font-weight: 400;
-    font-size: 17px;
+    font-size: 23 px;
     line-height: 1.7;
     color: #828282;
 }
@@ -356,7 +561,7 @@ li span {
 .couple-half h3 {
     font-family: 'Dancing Script', cursive;
     color: #F14E95;
-    font-size: 30px;
+    font-size: 45px;
 }
 
 .fadeInUp {
@@ -372,8 +577,8 @@ li span {
 }
 
 .couple-wrap {
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 20px auto;
     position: relative;
 }
 
@@ -451,14 +656,15 @@ li span {
 /* section3 */
 
 #section3 {
-    padding: 7em 0;
+    padding: 3em 0;
     clear: both;
     height: 100%;
-    background: url(https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/Img-banner/img_bg_3_dz6lw2);
+    background-image: url(https://res.cloudinary.com/dxy2muzyb/image/upload/v1689222570/wedding/section3/bqoks07kpbfjltsokin0.jpg);
 }
 
 .event-mb {
     display: flex;
+    margin-top: 20px;
 }
 
 .event .overlay {
@@ -474,20 +680,36 @@ li span {
 #section3 .event-wrap p {
     display: block;
     color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+}
+
+#section3 .event-wrap p a {
+    transition: .3s all ease;
+    color: #fff;
+}
+
+.locationMain {
+    margin-bottom: 57px !important;
 }
 
 #section3 .fh5co-heading h2 {
     color: #fff;
 }
 
-.time-event,
-.location-event {
-    display: flex;
+.popup-gmaps {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 1px solid #fff;
+    padding: 8px 10px;
+    color: #fff;
 }
 
-.location-event>span,
-.time-event>span {
-    margin-left: 3px;
+a.popup-gmaps:hover {
+    text-decoration: none;
+    color: #fff;
+    outline: none !important;
 }
 
 .event {
@@ -495,6 +717,7 @@ li span {
     background-position: top center !important;
     background-repeat: no-repeat !important;
     position: relative;
+    background-attachment: fixed;
 }
 
 .fh5co-heading span {
@@ -515,6 +738,24 @@ li span {
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     border-radius: 4px;
+}
+
+.event-wrap .icon {
+    margin-bottom: 15px;
+    color: #F14E95;
+}
+
+.event-wrap .location {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 0 !important;
+}
+
+.event-wrap .female {
+    margin-bottom: 10px;
+    width: 186.5px;
 }
 
 .event-wrap h3 {
@@ -544,174 +785,74 @@ li span {
 
 /* section4 */
 
-#fh5co-gallery-list {
 
-    flex-wrap: wrap;
+.gallery-list {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 24.5vw;
+    grid-gap: 0.6vw;
+}
 
-    -webkit-flex-wrap: wrap;
 
-    -moz-flex-wrap: wrap;
-
-    display: -webkit-box;
-
-    display: -moz-box;
-
-    display: -ms-flexbox;
-
-    display: -webkit-flex;
-
-    display: flex;
-
+.gallery-item {
     position: relative;
-
-    float: left;
-
-    padding: 0;
-
-    margin: 0;
-
     width: 100%;
-
 }
 
-.section-gray {
-
-    background: rgba(0, 0, 0, 0.04);
-
-}
-
-#fh5co-gallery-list li a .case-studies-summary {
-
-    width: auto;
-
-    bottom: 2em;
-
-    left: 2em;
-
-    right: 2em;
-
+.gallery-item img {
     position: absolute;
-
-    z-index: 100;
-
-}
-
-#fh5co-gallery-list li a .case-studies-summary span {
-
-    text-transform: uppercase;
-
-    letter-spacing: 2px;
-
-    font-size: 13px;
-
-    color: rgba(255, 255, 255, 0.7);
-
-}
-
-#fh5co-gallery-list li a .case-studies-summary h2 {
-
-    color: #fff;
-
-    font-size: 25px;
-
-    text-transform: none;
-
-    margin-bottom: 0;
-
-    font-family: "Work Sans", Arial, sans-serif;
-
-}
-
-#fh5co-gallery-list li.one-third {
-
-    width: 32.3%;
-
-}
-
-#fh5co-gallery-list li {
-
-    display: block;
-
-    padding: 0;
-
-    margin: 0 0 10px 1%;
-
-    list-style: none;
-
-    min-height: 400px;
-
-    background-position: center center;
-
-    background-size: cover;
-
-    background-repeat: no-repeat;
-
-    float: left;
-
-    clear: left;
-
-    position: relative;
-
-    -webkit-border-radius: 7px;
-
-    -moz-border-radius: 7px;
-
-    -ms-border-radius: 7px;
-
-    border-radius: 7px;
-
-}
-
-#fh5co-gallery-list li a {
-
-    min-height: 400px;
-
-    padding: 2em;
-
-    position: relative;
-
-    width: 100%;
-
-    display: block;
-
-}
-
-#fh5co-gallery-list li a:before {
-
-    position: absolute;
-
     top: 0;
-
     left: 0;
-
-    right: 0;
-
-    bottom: 0;
-
-    content: "";
-
-    z-index: 80;
-
-    -webkit-transition: 0.5s;
-
-    -o-transition: 0.5s;
-
-    transition: 0.5s;
-
-    -webkit-border-radius: 7px;
-
-    -moz-border-radius: 7px;
-
-    -ms-border-radius: 7px;
-
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 7px;
-
-    background: rgba(0, 0, 0, 0.2);
-
 }
 
-#fh5co-gallery-list li a:hover:before {
-    background: rgba(0, 0, 0, 0.5);
+.gallery-item .icon-hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    z-index: 1;
+    opacity: 0;
+}
+
+.gallery-item .icon-hover img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.gallery-item:hover .item-fancy::before {
+    opacity: 0.3;
+}
+
+.gallery-item:hover .icon-hover {
+    opacity: 1;
+}
+
+.gallery-item .item-fancy::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F14E95;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
 }
 
 /* section5 */
@@ -736,11 +877,12 @@ li span {
 
 #section6 {
     background-size: cover;
-    background-image: url(https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/Img-banner/img_bg_4_ysyuig);
+    background-image: url(https://res.cloudinary.com/dxy2muzyb/image/upload/v1689242955/wedding/section6/bjiqhdbptlag2xnithqy.jpg);
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-attachment: fixed;
 }
 
 /* section6 */
@@ -754,12 +896,13 @@ li span {
 }
 
 .wishes>h2 {
-    font-size: 50px;
+    font-size: 70px;
     font-family: 'Dancing Script', cursive;
     margin-bottom: 16px;
     color: #F14E95;
     margin-top: 0;
     text-align: center;
+    text-transform: capitalize;
 }
 
 .wishes>i {
@@ -767,33 +910,33 @@ li span {
     justify-content: center;
 }
 
-.section-sub .wishes::before {
+.wishes::before {
     position: absolute;
     content: "";
     width: 60px;
     height: 2px;
-    bottom: 11px;
+    bottom: 8px;
     left: calc(50% - 80px);
     background: #121f38;
 }
 
-.section-sub .wishes::after {
+.wishes::after {
     position: absolute;
     content: "";
     width: 60px;
     height: 2px;
-    bottom: 11px;
+    bottom: 8px;
     right: calc(50% - 80px);
     background: #121f38;
 }
 
-.section-sub .fa-heart:before {
+.wishes.fa-heart:before {
     margin-bottom: 4px;
 }
 
 #section7 {
     background-size: cover;
-    background-image: url(https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/Img-banner/img_bg_4_ysyuig);
+    background-image: url(https://res.cloudinary.com/dxy2muzyb/image/upload/v1689223142/wedding/section7/tut6r5muc3bir0qys49l.jpg);
     background-position: center;
 }
 
@@ -859,16 +1002,6 @@ li span {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%;
-}
-
-.testimonial .testimony-slide blockquote {
-    border: none;
-    margin: 20px 0;
-    position: relative;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    border-radius: 4px;
 }
 
 .testimonial .testimony-slide blockquote p {
@@ -1112,7 +1245,7 @@ button.back-to-top.show:active {
 
 /* section-sub-header*/
 .section-sub-header {
-    background-image: url(https://res.cloudinary.com/dmxj9abgx/image/upload/f_auto,q_auto/v1/Wedding/Img-banner/0U8A8237-min_pypaif_1_ngvlo3);
+    background-image: url(https://res.cloudinary.com/dxy2muzyb/image/upload/v1689156725/wedding/section-sub-header/as48iymrjrey02idj93n.jpg);
     transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     padding: 70px 0px 90px 0px;
     background-position: center center;
@@ -1121,7 +1254,8 @@ button.back-to-top.show:active {
     position: relative;
 }
 
-.page-wrapper .btn a {
+.page-wrapper .btn a,
+.page-wrapper .btn button {
     display: inline-block;
     background: #fff;
     color: #F14E95;
@@ -1130,6 +1264,7 @@ button.back-to-top.show:active {
     transition: all .3s;
     font-weight: 600;
     border-radius: 50px;
+    border: none;
 }
 
 .elementor-background-overlay {
@@ -1177,11 +1312,12 @@ button.back-to-top.show:active {
 }
 
 .welcome-content p {
-    font-size: 18px;
-    padding: 20px 50px 30px;
+    font-size: 22px;
+    padding: 20px 30px 30px;
     color: #fff;
-    max-width: 700px;
+    max-width: 800px;
     margin: auto;
+    font-family: 'Dancing Script', cursive;
 }
 
 /* formValidation */
@@ -1227,7 +1363,7 @@ button.back-to-top.show:active {
     justify-content: center;
     margin: 0;
     padding: 1rem 0;
-    
+
 }
 
 .slick-dots button {
@@ -1236,23 +1372,43 @@ button.back-to-top.show:active {
     height: 0.5rem;
     padding: 0;
     background: transparent;
-    border: 2px solid #F14E95;
     border: none;
     border-radius: 100%;
-    background-color: rgb(237, 17, 222);
+    background: #e6e6e6;
     text-indent: -9999px;
 }
 
 li.slick-active button {
-    background-color: rgb(6, 236, 6);
+    background: transparent;
+    border: 1.3px solid #F14E95;
+    border-radius: 30px;
 }
 
-.slick-prev{
+.slick-prev {
     display: none !important;
 }
 
 .slick-next {
     display: none !important;
+}
+
+.card-body.copy {
+    display: flex;
+    justify-content: center;
+}
+
+.text-muted {
+    color: #9ca8b3 !important;
+}
+
+.btn-primary {
+    background-color: #626ed4 !important;
+    border: 1px solid #626ed4 !important;
+}
+
+.btn {
+    border-radius: 3px;
+    font-size: 14px;
 }
 
 /* Animation */

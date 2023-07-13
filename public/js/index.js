@@ -92,14 +92,6 @@ $(document).ready(function () {
     loop: false,
     protect: true
   });
-  $('.slider-main').slick({
-    // dots: true,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-  });
   $('.slider').slick({
     dots: true,
     autoplay: true,
