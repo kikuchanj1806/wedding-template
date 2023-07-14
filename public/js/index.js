@@ -104,16 +104,20 @@ $(document).ready(function () {
 document.getElementById("wedding-form").addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector("[name='name']").value;
-  const phone = document.querySelector("[name='phone']").value;
+  const name = checkLength(document.getElementById('username'));
+  const phone = checkPhoneError(document.getElementById('phone'));
   const attachment = document.querySelector("[name='number']").value;
   const eventSelect = document.querySelector("[name='event']");
   const eventOption = eventSelect.options[eventSelect.selectedIndex].text;
-
-  const greetings = document.querySelector("[name='greetings']").value;
+  const greetings = checkLengthError(document.getElementById('greetings'), 6);
   const image = document.getElementById('uploadedImage').getAttribute('src');
+  let formData;
 
-  const formData = { name, phone, attachment, eventOption, greetings, image };
+  if (name && phone && greetings) {
+    formData = { name, phone, attachment, eventOption, greetings, image };
+  } else {
+    return;
+  }
 
   try {
     const response = await fetch("/api/congratulations", {
@@ -126,7 +130,7 @@ document.getElementById("wedding-form").addEventListener("submit", async (event)
 
     if (response.ok) {
       const congra = await response.json();
-      console.log(congra);
+      alert('Cảm ơn bạn đã gửi lời chúc mừng!');
     } else {
       const errorData = await response.json();
       console.error(errorData);
@@ -164,3 +168,64 @@ document.getElementById('readUrl').addEventListener('change', function () {
     })
   }
 });
+
+
+function showError(input, message) {
+  let parent = input.parentElement;
+  let small = parent.querySelector('small')
+
+  parent.classList.add('error')
+  small.innerText = message;
+}
+
+function checkLengthError(input, min) {
+  clearError(input);
+  let valueGreet = input.value.length;
+  if (valueGreet < min) {
+    showError(input, `Phải có ít nhất ${min} ký tự`);
+    return false;
+  } else {
+    return true
+  }
+}
+
+function checkPhoneError(input) {
+  clearError(input);
+  const regexPhone = /^(?:\+?84|0)(?:3[2-9]|5[6|8|9]|7[0|6-9]|8[1-6|8-9]|9[0-9])\d{7}$/;
+  const value = input.value;
+
+  if (value === '') {
+    showError(input, 'Trường này là bắt buộc');
+    return false;
+  }
+
+  const isPhoneError = !regexPhone.test(value);
+
+  if (isPhoneError) {
+    showError(input, 'Số điện thoại không hợp lệ');
+    return false;
+  } else {
+    return value;
+  }
+
+  return value;
+}
+
+
+function checkLength(input) {
+  clearError(input);
+  let userNameValue = input.value;
+  if (userNameValue === "") {
+    showError(input, "Trường này là bắt buộc");
+    return false;
+  } else {
+    return userNameValue;
+  }
+}
+function clearError(input) {
+  const parent = input.parentElement;
+  const small = parent.querySelector('small');
+
+  parent.classList.remove('error');
+  small.innerText = '';
+}

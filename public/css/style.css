@@ -649,7 +649,7 @@ li span {
 /* section3 */
 
 #section3 {
-    padding: 3em 0;
+    padding: 5em 0;
     height: 100%;
     background-position: center center;
     background-repeat: no-repeat;
@@ -663,7 +663,8 @@ li span {
     margin-top: 20px;
 }
 
-.event .overlay {
+.event .overlay,
+#section3 .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -854,13 +855,19 @@ a.popup-gmaps:hover {
 /* section5 */
 
 #section5 {
-    padding: 60px 0;
+    padding: 50px 0;
 }
 
 #section5>.container>.row {
     flex-direction: column;
     flex-wrap: nowrap !important;
 }
+
+#section5 .slider {
+    margin-top: 20px;
+}
+
+/* end section5 */
 
 #section6 .box_slide {
     flex-direction: column;
