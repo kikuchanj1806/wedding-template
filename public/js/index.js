@@ -181,11 +181,12 @@ function showError(input, message) {
 function checkLengthError(input, min) {
   clearError(input);
   let valueGreet = input.value.length;
+  let greetingsText = input.value;
   if (valueGreet < min) {
     showError(input, `Phải có ít nhất ${min} ký tự`);
     return false;
   } else {
-    return true
+    return greetingsText
   }
 }
 
@@ -210,7 +211,6 @@ function checkPhoneError(input) {
 
   return value;
 }
-
 
 function checkLength(input) {
   clearError(input);
