@@ -651,7 +651,6 @@ li span {
 #section3 {
     padding: 3em 0;
     height: 100%;
-    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
