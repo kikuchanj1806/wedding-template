@@ -122,6 +122,14 @@
         object-fit: cover;
     }
 
+    /* section3 */
+    #section3 {
+        background-image: url(https://res.cloudinary.com/dxy2muzyb/image/upload/v1689307685/wedding/section3/ndjvyctewhqgvhaqwdol.jpg);
+    }
+
+    /* end section3 */
+
+
     /* section4 */
 
     .gallery-list {
