@@ -652,6 +652,11 @@ li span {
     padding: 3em 0;
     clear: both;
     height: 100%;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
     background-image: url(https://res.cloudinary.com/dxy2muzyb/image/upload/v1689156725/wedding/section-sub-header/as48iymrjrey02idj93n.jpg);
 }
 
